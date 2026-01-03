@@ -1,4 +1,3 @@
-<!-- vis.html -->
 <!doctype html>
 <html>
 <head>
@@ -14,20 +13,19 @@
     header { padding: 12px 16px; font-weight: 600; border-bottom: 1px solid #ddd; }
     #timeline { height: calc(100vh - 52px); }
 
-    /* Background-ish overlays */
-    .vis-item.demographic-band { opacity: 0.38; }
-    .vis-item.prophecy-band { opacity: 0.48; }
-    .vis-item.meta-band { opacity: 0.45; }
+    .vis-item.demographic { opacity: 0.35; }
+    .vis-item.prophecy { opacity: 0.5; }
+    .vis-item.lifespan { opacity: 0.7; }
 
-    /* Make labels readable without exploding layout */
-    .vis-item .vis-item-content {
-      max-width: 420px;
-      white-space: normal;     /* allow wrapping */
+    .vis-item-content {
+      max-width: 520px;
+      white-space: normal;
       line-height: 1.15;
     }
 
-    /* Points: a bit bolder so anchors pop */
-    .vis-item.vis-point .vis-item-content { font-weight: 600; }
+    .vis-item.vis-point .vis-item-content {
+      font-weight: 600;
+    }
   </style>
 </head>
 
@@ -41,7 +39,6 @@
 
   <div id="timeline"></div>
 
-  <!-- Cache-buster: bump v= when you update vis-data.js -->
-  <script src="./vis-data.js?v=4"></script>
+  <script src="./vis-data.js?v=6"></script>
 </body>
 </html>
