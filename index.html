@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Biblical Timelines</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; }
+      .wrap { display: grid; gap: 16px; padding: 16px; }
+      .frame { width: 100%; height: 80vh; border: 0; }
+      .label { font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="label">Human / Prophetic Timeline</div>
+      <iframe
+        class="frame"
+        src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https://raw.githubusercontent.com/faceparade/biblical-timelines/main/human_prophetic.timeline.json&font=Default&lang=en&initial_zoom=2&height=650"
+        allowfullscreen
+      ></iframe>
+
+      <div class="label">Deep Time (Context)</div>
+      <iframe
+        class="frame"
+        src="https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=https://raw.githubusercontent.com/faceparade/biblical-timelines/main/deep_time.timeline.json&font=Default&lang=en&initial_zoom=2&height=650"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>
