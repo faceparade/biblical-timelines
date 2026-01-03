@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Biblical Timelines — vis-timeline</title>
+  <title>Biblical Timelines — vis</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://unpkg.com/vis-timeline@8.5.0/styles/vis-timeline-graph2d.min.css" rel="stylesheet">
@@ -12,17 +12,20 @@
   <style>
     body { margin: 0; font-family: system-ui, sans-serif; }
     header { padding: 12px 16px; font-weight: 600; border-bottom: 1px solid #ddd; }
-    #timeline { height: calc(100vh - 50px); }
+    #timeline { height: calc(100vh - 52px); }
 
-    /* Make background-ish bands less visually heavy */
-    .vis-item.grp-demographic.vis-range { opacity: 0.55; }
-    .vis-item.grp-prophecy_meta.vis-range { opacity: 0.65; }
+    /* Make “background bands” feel like overlays, not primary objects */
+    .vis-item.demographic-band { opacity: 0.45; }
+    .vis-item.prophecy-band { opacity: 0.55; }
 
-    /* Make key anchors pop a bit */
-    .vis-item.grp-jw_org.vis-point .vis-item-content { font-weight: 700; }
-    .vis-item.grp-adamic_history.vis-point .vis-item-content { font-weight: 700; }
+    /* Points slightly bolder for readability */
+    .vis-item.vis-point .vis-item-content { font-weight: 600; }
+
+    /* Keep long labels from exploding */
+    .vis-item-content { max-width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   </style>
 </head>
+
 <body>
   <header>
     Human / Prophetic Timeline (vis-timeline)
@@ -33,7 +36,7 @@
 
   <div id="timeline"></div>
 
-  <!-- Cache-buster: bump v= whenever you change vis-data.js -->
-  <script src="./vis-data.js?v=2"></script>
+  <!-- Cache-buster: bump v= whenever you edit vis-data.js -->
+  <script src="./vis-data.js?v=1"></script>
 </body>
 </html>
