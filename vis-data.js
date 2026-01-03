@@ -1,5 +1,4 @@
-// vis-data.js — FULL CSV EMITTER (authoritative)
-// Loads TimelineJS_Master_Unified.csv and converts ALL rows into vis-timeline items.
+// vis-data.js — FULL CSV EMITTER (FIXED GROUP NORMALIZATION)
 
 function dateY(year, month = 1, day = 1) {
   const d = new Date(Date.UTC(0, month - 1, day));
@@ -9,22 +8,54 @@ function dateY(year, month = 1, day = 1) {
   return d;
 }
 
-// --- Groups (lanes) ---
+// ------------------------------------------------------------
+// Canonical group definitions (lanes)
+// ------------------------------------------------------------
 const groups = new vis.DataSet([
-  { id: "Human Moral History (Adamic)", content: "Human Moral History (Adamic)" },
-  { id: "Patriarch Lifespans", content: "Patriarch Lifespans" },
-  { id: "Anointed Lifespans", content: "Anointed Lifespans" },
-  { id: "Genesis 10 Nations", content: "Genesis 10 Nations" },
-  { id: "Cultural Megaprojects", content: "Cultural Megaprojects" },
-  { id: "King of North/South", content: "King of North/South" },
-  { id: "JW Prophecy", content: "JW Prophecy" },
-  { id: "Prophecy Meta", content: "Authorship + Fulfillment Windows" },
-  { id: "Demographic Envelope", content: "Demographic Envelope (Non-Doctrinal)" }
+  { id: "adamic_history", content: "Human Moral History (Adamic)" },
+  { id: "patriarch_lifespans", content: "Patriarch Lifespans" },
+  { id: "anointed_lifespans", content: "Anointed Lifespans" },
+  { id: "genesis_10_nations", content: "Genesis 10 Nations" },
+  { id: "cultural_megaprojects", content: "Cultural Megaprojects" },
+  { id: "king_of_north_south", content: "King of North/South" },
+  { id: "jw_prophecy", content: "JW Prophetic Overlays" },
+  { id: "prophecy_meta", content: "Authorship + Fulfillment Windows" },
+  { id: "demographic", content: "Demographic Envelope (Non-Doctrinal)" }
 ]);
+
+// ------------------------------------------------------------
+// CSV → group ID normalization map
+// THIS IS THE MISSING PIECE
+// ------------------------------------------------------------
+const GROUP_MAP = {
+  // Adamic / history
+  "Human Moral History (Adamic)": "adamic_history",
+  "Adamic / Bible-history anchors": "adamic_history",
+
+  // Lifespans
+  "Patriarch Lifespans": "patriarch_lifespans",
+  "patriarch_lifespans": "patriarch_lifespans",
+  "Anointed Lifespans": "anointed_lifespans",
+
+  // Nations / culture
+  "Genesis 10 Nations": "genesis_10_nations",
+  "Cultural Megaprojects": "cultural_megaprojects",
+
+  // Prophecy
+  "JW Prophecy": "jw_prophecy",
+  "Prophecy Meta": "prophecy_meta",
+  "Authorship + Fulfillment": "prophecy_meta",
+
+  // Demographic
+  "Demographic Envelope": "demographic",
+  "Demographic Envelope (Non-Doctrinal)": "demographic"
+};
 
 const items = new vis.DataSet();
 
-// --- CSV Loader ---
+// ------------------------------------------------------------
+// Load FULL CSV (authoritative)
+// ------------------------------------------------------------
 fetch("./TimelineJS_Master_Unified.csv")
   .then(res => res.text())
   .then(text => {
@@ -34,17 +65,29 @@ fetch("./TimelineJS_Master_Unified.csv")
     lines.forEach((line, i) => {
       if (!line.trim()) return;
 
-      const cols = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
-                       .map(c => c.replace(/^"|"$/g, ""));
+      const cols = line
+        .split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
+        .map(c => c.replace(/^"|"$/g, ""));
 
-      const row = Object.fromEntries(headers.map((h, i) => [h, cols[i]]));
+      const row = Object.fromEntries(
+        headers.map((h, i) => [h.trim(), cols[i]])
+      );
+
+      const rawGroup = row.group;
+      const groupId = GROUP_MAP[rawGroup];
+
+      // If group is unknown, DO NOT silently drop — log it
+      if (!groupId) {
+        console.warn("Unmapped CSV group:", rawGroup, row.title);
+        return;
+      }
 
       const startYear = Number(row.start_year);
       const endYear = row.end_year ? Number(row.end_year) : null;
 
       const item = {
         id: `csv_${i}`,
-        group: row.group,
+        group: groupId,
         content: row.title,
         start: dateY(startYear),
         title: row.description || row.title
@@ -62,7 +105,9 @@ fetch("./TimelineJS_Master_Unified.csv")
       items.add(item);
     });
 
-    // --- Timeline ---
+    // ------------------------------------------------------------
+    // Render timeline
+    // ------------------------------------------------------------
     const container = document.getElementById("timeline");
 
     const options = {
