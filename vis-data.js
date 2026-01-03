@@ -9,8 +9,10 @@ function dateY(year, month = 1, day = 1) {
 // ===============================
 // CONFIG — CHANGE ONLY THIS LINE
 // ===============================
-const CSV_FILE = "./patriarch_lifespans_full.csv";
-
+const CSV_FILES = [
+  "./patriarch_lifespans_full.csv",
+  "./adamic_anchor_events.csv"
+];
 // -------------------------------
 // Groups (lanes)
 // -------------------------------
@@ -33,40 +35,37 @@ const GROUP_MAP = {
 
 const items = new vis.DataSet();
 
-fetch(CSV_FILE)
-  .then(res => {
-    if (!res.ok) {
-      throw new Error(`CSV not found: ${CSV_FILE}`);
-    }
-    return res.text();
-  })
-  .then(text => {
+Promise.all(
+  CSV_FILES.map(file =>
+    fetch(file).then(res => {
+      if (!res.ok) throw new Error(`CSV not found: ${file}`);
+      return res.text();
+    })
+  )
+)
+.then(texts => {
+  let added = 0;
+
+  texts.forEach(text => {
     const lines = text.trim().split(/\r?\n/);
     const headers = lines.shift().split(",");
-
-    let added = 0;
 
     lines.forEach((line, i) => {
       if (!line.trim()) return;
 
-      const cols = line.split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
-                       .map(c => c.replace(/^"|"$/g, ""));
-
+      const cols = line.split(",");
       const row = Object.fromEntries(
         headers.map((h, i) => [h.trim(), cols[i]])
       );
 
       const groupId = GROUP_MAP[row.group];
-      if (!groupId) {
-        console.warn("Unknown group:", row.group);
-        return;
-      }
+      if (!groupId) return;
 
       const start = Number(row.start_year);
       if (Number.isNaN(start)) return;
 
       const item = {
-        id: `row_${i}`,
+        id: `${row.title}_${added}`,
         group: groupId,
         content: row.title,
         start: dateY(start),
@@ -81,25 +80,20 @@ fetch(CSV_FILE)
       items.add(item);
       added++;
     });
-
-    console.log(`Loaded ${added} timeline items`);
-
-    const container = document.getElementById("timeline");
-
-    const options = {
-      orientation: { axis: "top" },
-      stack: true,
-      zoomKey: "ctrlKey",
-      horizontalScroll: true,
-      verticalScroll: true,
-      min: dateY(-4500),
-      max: dateY(2300)
-    };
-
-    const timeline = new vis.Timeline(container, items, groups, options);
-    timeline.fit();
-  })
-  .catch(err => {
-    console.error(err);
-    alert(err.message);
   });
+
+  console.log(`Loaded ${added} timeline items`);
+
+  const container = document.getElementById("timeline");
+  const timeline = new vis.Timeline(container, items, groups, {
+    orientation: { axis: "top" },
+    stack: true,
+    zoomKey: "ctrlKey",
+    horizontalScroll: true,
+    verticalScroll: true,
+    min: dateY(-4500),
+    max: dateY(2300)
+  });
+
+  timeline.fit();
+});
