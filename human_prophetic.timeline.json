@@ -11,7 +11,7 @@
         "year": "-4026"
       },
       "text": {
-        "headline": "Adam created — Beginning of Man",
+        "headline": "Adam created \u2014 Beginning of Man",
         "text": "Adam_created=4026_BCE; Human_history_starts=Adam; Moral_accountability_begins=Adam."
       },
       "group": "Adamic History"
@@ -24,7 +24,7 @@
         "headline": "Adam",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Adam",
       "end_date": {
         "year": "-3096"
       }
@@ -37,7 +37,7 @@
         "headline": "Seth",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Seth",
       "end_date": {
         "year": "-2984"
       }
@@ -50,7 +50,7 @@
         "headline": "Enosh",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Enosh",
       "end_date": {
         "year": "-2861"
       }
@@ -63,7 +63,7 @@
         "headline": "Kenan",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Kenan",
       "end_date": {
         "year": "-2766"
       }
@@ -76,7 +76,7 @@
         "headline": "Mahalalel",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Mahalalel",
       "end_date": {
         "year": "-2711"
       }
@@ -89,7 +89,7 @@
         "headline": "Jared",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Jared",
       "end_date": {
         "year": "-2579"
       }
@@ -102,7 +102,7 @@
         "headline": "Enoch",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Enoch",
       "end_date": {
         "year": "-3024"
       }
@@ -115,7 +115,7 @@
         "headline": "Methuselah",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Methuselah",
       "end_date": {
         "year": "-2348"
       }
@@ -128,7 +128,7 @@
         "headline": "Lamech",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Lamech",
       "end_date": {
         "year": "-2353"
       }
@@ -141,7 +141,7 @@
         "headline": "Noah",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Noah",
       "end_date": {
         "year": "-2024"
       }
@@ -154,7 +154,7 @@
         "headline": "Shem",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Shem",
       "end_date": {
         "year": "-1874"
       }
@@ -167,7 +167,7 @@
         "headline": "Arpachshad",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Arpachshad",
       "end_date": {
         "year": "-1936"
       }
@@ -190,7 +190,7 @@
         "headline": "Salah",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Salah",
       "end_date": {
         "year": "-1876"
       }
@@ -200,7 +200,7 @@
         "year": "-2300"
       },
       "text": {
-        "headline": "Japheth → Europe / Indo-European regions",
+        "headline": "Japheth \u2192 Europe / Indo-European regions",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -213,7 +213,7 @@
         "year": "-2300"
       },
       "text": {
-        "headline": "Shem → Semitic peoples",
+        "headline": "Shem \u2192 Semitic peoples",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -226,7 +226,7 @@
         "year": "-2300"
       },
       "text": {
-        "headline": "Ham → Africa / Canaan",
+        "headline": "Ham \u2192 Africa / Canaan",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -242,7 +242,7 @@
         "headline": "Eber",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Eber",
       "end_date": {
         "year": "-1815"
       }
@@ -255,7 +255,7 @@
         "headline": "Peleg",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Peleg",
       "end_date": {
         "year": "-2009"
       }
@@ -268,7 +268,7 @@
         "headline": "Reu",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Reu",
       "end_date": {
         "year": "-1980"
       }
@@ -278,7 +278,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Gomer → Cimmerians / Europe",
+        "headline": "Gomer \u2192 Cimmerians / Europe",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -291,7 +291,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Magog → Scythians",
+        "headline": "Magog \u2192 Scythians",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -304,7 +304,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Madai → Medes",
+        "headline": "Madai \u2192 Medes",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -317,7 +317,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Javan → Greeks",
+        "headline": "Javan \u2192 Greeks",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -330,7 +330,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Tubal → Anatolia",
+        "headline": "Tubal \u2192 Anatolia",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -343,7 +343,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Meshech → Caucasus",
+        "headline": "Meshech \u2192 Caucasus",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -356,7 +356,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Tiras → Thracians",
+        "headline": "Tiras \u2192 Thracians",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -369,7 +369,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Elam → Elamites",
+        "headline": "Elam \u2192 Elamites",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -382,7 +382,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Asshur → Assyrians",
+        "headline": "Asshur \u2192 Assyrians",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -395,7 +395,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Arpachshad → Hebrews",
+        "headline": "Arpachshad \u2192 Hebrews",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -408,7 +408,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Aram → Arameans",
+        "headline": "Aram \u2192 Arameans",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -421,7 +421,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Cush → Ethiopia / Nubia",
+        "headline": "Cush \u2192 Ethiopia / Nubia",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -434,7 +434,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Mizraim → Egypt",
+        "headline": "Mizraim \u2192 Egypt",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -447,7 +447,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Put → Libya",
+        "headline": "Put \u2192 Libya",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -460,7 +460,7 @@
         "year": "-2200"
       },
       "text": {
-        "headline": "Canaan → Canaanites",
+        "headline": "Canaan \u2192 Canaanites",
         "text": "(Generated layer)"
       },
       "group": "Genesis 10 Nations",
@@ -476,7 +476,7 @@
         "headline": "Serug",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Serug",
       "end_date": {
         "year": "-1957"
       }
@@ -489,7 +489,7 @@
         "headline": "Nahor",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Nahor",
       "end_date": {
         "year": "-2009"
       }
@@ -502,7 +502,7 @@
         "headline": "Terah",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Terah",
       "end_date": {
         "year": "-1923"
       }
@@ -525,7 +525,7 @@
         "headline": "Abraham",
         "text": "(Generated layer)"
       },
-      "group": "Patriarch Lifespans",
+      "group": "Patriarch lifespan \u2014 Abraham",
       "end_date": {
         "year": "-1843"
       }
@@ -576,7 +576,7 @@
       },
       "text": {
         "headline": "David reigns",
-        "text": "David_reigns=1077–1037_BCE."
+        "text": "David_reigns=1077\u20131037_BCE."
       },
       "group": "Adamic History",
       "end_date": {
@@ -589,7 +589,7 @@
       },
       "text": {
         "headline": "Solomon reigns",
-        "text": "Solomon_reigns=1037–998_BCE."
+        "text": "Solomon_reigns=1037\u2013998_BCE."
       },
       "group": "Adamic History",
       "end_date": {
@@ -625,7 +625,7 @@
       },
       "text": {
         "headline": "Joel written (approx.)",
-        "text": "Author=Joel; Core=Day_of_Jehovah; Verses=Joel 2–3; Fulfillment_window=Last_days–Future (JW framework)."
+        "text": "Author=Joel; Core=Day_of_Jehovah; Verses=Joel 2\u20133; Fulfillment_window=Last_days\u2013Future (JW framework)."
       },
       "group": "Prophecy Meta",
       "end_date": {
@@ -664,7 +664,7 @@
       },
       "text": {
         "headline": "Ezekiel written (approx.)",
-        "text": "Author=Ezekiel; Core=Gog of Magog; Verses=Ezekiel 38–39; Fulfillment=future (JW framework)."
+        "text": "Author=Ezekiel; Core=Gog of Magog; Verses=Ezekiel 38\u201339; Fulfillment=future (JW framework)."
       },
       "group": "Prophecy Meta",
       "end_date": {
@@ -687,7 +687,7 @@
       },
       "text": {
         "headline": "Daniel written (approx.)",
-        "text": "Author=Daniel; Key sections=Daniel 2,4,7,9,11–12; Fulfillment windows include 607 BCE–1914 CE (JW Gentile Times) and 29–33 CE (Messiah)."
+        "text": "Author=Daniel; Key sections=Daniel 2,4,7,9,11\u201312; Fulfillment windows include 607 BCE\u20131914 CE (JW Gentile Times) and 29\u201333 CE (Messiah)."
       },
       "group": "Prophecy Meta",
       "end_date": {
@@ -748,8 +748,8 @@
         "year": "-455"
       },
       "text": {
-        "headline": "Daniel 9 — Seventy Weeks start (JW anchor)",
-        "text": "Seventy_Weeks_start=455_BCE; Verses=Daniel 9:24–27."
+        "headline": "Daniel 9 \u2014 Seventy Weeks start (JW anchor)",
+        "text": "Seventy_Weeks_start=455_BCE; Verses=Daniel 9:24\u201327."
       },
       "group": "Prophecy Meta"
     },
@@ -797,7 +797,7 @@
         "year": "-246"
       },
       "text": {
-        "headline": "Dan 11:6–9: Seleucid Syria (North)",
+        "headline": "Dan 11:6\u20139: Seleucid Syria (North)",
         "text": "(Generated layer)"
       },
       "group": "Daniel 11 (K of N/S)",
@@ -810,7 +810,7 @@
         "year": "-223"
       },
       "text": {
-        "headline": "Dan 11:10–15: Antiochus III",
+        "headline": "Dan 11:10\u201315: Antiochus III",
         "text": "(Generated layer)"
       },
       "group": "Daniel 11 (K of N/S)",
@@ -875,7 +875,7 @@
         "year": "-63"
       },
       "text": {
-        "headline": "Dan 11:21–35: Imperial Rome",
+        "headline": "Dan 11:21\u201335: Imperial Rome",
         "text": "(Generated layer)"
       },
       "group": "Daniel 11 (K of N/S)",
@@ -909,7 +909,7 @@
       },
       "text": {
         "headline": "2 Thessalonians written (Man of Lawlessness)",
-        "text": "Author=Paul; Verses=2 Thessalonians 2; Fulfillment=post-apostolic–future (JW framework)."
+        "text": "Author=Paul; Verses=2 Thessalonians 2; Fulfillment=post-apostolic\u2013future (JW framework)."
       },
       "group": "Prophecy Meta"
     },
@@ -932,7 +932,7 @@
       },
       "text": {
         "headline": "Revelation written",
-        "text": "Author=John; Verses=Revelation; Fulfillment emphasis=1914–future (JW framework)."
+        "text": "Author=John; Verses=Revelation; Fulfillment emphasis=1914\u2013future (JW framework)."
       },
       "group": "Prophecy Meta"
     },
@@ -967,7 +967,7 @@
         "year": "1760"
       },
       "text": {
-        "headline": "Dan 11:36–39: Modern North (Anglo-American)",
+        "headline": "Dan 11:36\u201339: Modern North (Anglo-American)",
         "text": "(Generated layer)"
       },
       "group": "Daniel 11 (K of N/S)",
@@ -983,7 +983,7 @@
         "headline": "Russell",
         "text": "(Generated layer)"
       },
-      "group": "Anointed Lifespans",
+      "group": "Anointed lifespan \u2014 Russell",
       "end_date": {
         "year": "1916"
       }
@@ -996,7 +996,7 @@
         "headline": "Rutherford",
         "text": "(Generated layer)"
       },
-      "group": "Anointed Lifespans",
+      "group": "Anointed lifespan \u2014 Rutherford",
       "end_date": {
         "year": "1942"
       }
@@ -1029,7 +1029,7 @@
         "headline": "Franz",
         "text": "(Generated layer)"
       },
-      "group": "Anointed Lifespans",
+      "group": "Anointed lifespan \u2014 Franz",
       "end_date": {
         "year": "1992"
       }
@@ -1042,7 +1042,7 @@
         "headline": "Knorr",
         "text": "(Generated layer)"
       },
-      "group": "Anointed Lifespans",
+      "group": "Anointed lifespan \u2014 Knorr",
       "end_date": {
         "year": "1977"
       }
@@ -1075,7 +1075,7 @@
         "headline": "Late overlap cohort",
         "text": "(Generated layer)"
       },
-      "group": "Anointed Lifespans",
+      "group": "Anointed lifespan \u2014 Late overlap cohort",
       "end_date": {
         "year": "2050"
       }
@@ -1096,7 +1096,7 @@
       },
       "text": {
         "headline": "Minimum envelope year (non-doctrinal)",
-        "text": "Minimum_end≈2026; Based_on=1992 overlap + minimum anointing age ≈20; Status=Analytical_only."
+        "text": "Minimum_end\u22482026; Based_on=1992 overlap + minimum anointing age \u224820; Status=Analytical_only."
       },
       "group": "Demographic"
     },
@@ -1106,7 +1106,7 @@
       },
       "text": {
         "headline": "Current year",
-        "text": "Current_year=2026_CE; Total_years_since_Adam≈6050."
+        "text": "Current_year=2026_CE; Total_years_since_Adam\u22486050."
       },
       "group": "Adamic History"
     },
@@ -1116,7 +1116,7 @@
       },
       "text": {
         "headline": "Reasonable envelope (non-doctrinal)",
-        "text": "Reasonable_end≈2080–2095; Assumption=lifespan ≈85–100; Status=Analytical_only."
+        "text": "Reasonable_end\u22482080\u20132095; Assumption=lifespan \u224885\u2013100; Status=Analytical_only."
       },
       "group": "Demographic",
       "end_date": {
@@ -1129,7 +1129,7 @@
       },
       "text": {
         "headline": "Extreme envelope (non-doctrinal)",
-        "text": "Extreme_end≈2150–2160; Assumption=lifespan ≈115–122; Status=Analytical_only."
+        "text": "Extreme_end\u22482150\u20132160; Assumption=lifespan \u2248115\u2013122; Status=Analytical_only."
       },
       "group": "Demographic",
       "end_date": {
