@@ -1,0 +1,1140 @@
+{
+  "title": {
+    "text": {
+      "headline": "Human / Prophetic Timeline (Expanded)",
+      "text": "Expanded from your CSV layers: Bible-history anchors + patriarch/anointed lifespans + Genesis 10 nations + Daniel 11 King of North/South phases + cultural megaprojects. BCE years use negative numbers."
+    }
+  },
+  "events": [
+    {
+      "start_date": {
+        "year": "-4026"
+      },
+      "text": {
+        "headline": "Adam created — Beginning of Man",
+        "text": "Adam_created=4026_BCE; Human_history_starts=Adam; Moral_accountability_begins=Adam."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-4026"
+      },
+      "text": {
+        "headline": "Adam",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-3096"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3896"
+      },
+      "text": {
+        "headline": "Seth",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2984"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3766"
+      },
+      "text": {
+        "headline": "Enosh",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2861"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3676"
+      },
+      "text": {
+        "headline": "Kenan",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2766"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3606"
+      },
+      "text": {
+        "headline": "Mahalalel",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2711"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3541"
+      },
+      "text": {
+        "headline": "Jared",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2579"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3389"
+      },
+      "text": {
+        "headline": "Enoch",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-3024"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3317"
+      },
+      "text": {
+        "headline": "Methuselah",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2348"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-3130"
+      },
+      "text": {
+        "headline": "Lamech",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2353"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2974"
+      },
+      "text": {
+        "headline": "Noah",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2024"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2474"
+      },
+      "text": {
+        "headline": "Shem",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1874"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2374"
+      },
+      "text": {
+        "headline": "Arpachshad",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1936"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2370"
+      },
+      "text": {
+        "headline": "Flood",
+        "text": "Flood=2370_BCE; Years_Adam_to_Flood=1656."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-2309"
+      },
+      "text": {
+        "headline": "Salah",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1876"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2300"
+      },
+      "text": {
+        "headline": "Japheth → Europe / Indo-European regions",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "0"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2300"
+      },
+      "text": {
+        "headline": "Shem → Semitic peoples",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "0"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2300"
+      },
+      "text": {
+        "headline": "Ham → Africa / Canaan",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "0"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2279"
+      },
+      "text": {
+        "headline": "Eber",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1815"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2249"
+      },
+      "text": {
+        "headline": "Peleg",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2009"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2219"
+      },
+      "text": {
+        "headline": "Reu",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1980"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Gomer → Cimmerians / Europe",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-500"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Magog → Scythians",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-300"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Madai → Medes",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-550"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Javan → Greeks",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-146"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Tubal → Anatolia",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-500"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Meshech → Caucasus",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-300"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Tiras → Thracians",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-500"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Elam → Elamites",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-539"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Asshur → Assyrians",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-612"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Arpachshad → Hebrews",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "70"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Aram → Arameans",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-500"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Cush → Ethiopia / Nubia",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-500"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Mizraim → Egypt",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-30"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Put → Libya",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-500"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2200"
+      },
+      "text": {
+        "headline": "Canaan → Canaanites",
+        "text": "(Generated layer)"
+      },
+      "group": "Genesis 10 Nations",
+      "end_date": {
+        "year": "-1200"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2187"
+      },
+      "text": {
+        "headline": "Serug",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1957"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2157"
+      },
+      "text": {
+        "headline": "Nahor",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-2009"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2128"
+      },
+      "text": {
+        "headline": "Terah",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1923"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-2018"
+      },
+      "text": {
+        "headline": "Abraham born",
+        "text": "Abraham_born=2018_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-2018"
+      },
+      "text": {
+        "headline": "Abraham",
+        "text": "(Generated layer)"
+      },
+      "group": "Patriarch Lifespans",
+      "end_date": {
+        "year": "-1843"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-1943"
+      },
+      "text": {
+        "headline": "Abraham enters Canaan / Abrahamic covenant anchor",
+        "text": "Abraham_enters_Canaan=1943_BCE; Abrahamic_Covenant=1943_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-1513"
+      },
+      "text": {
+        "headline": "Exodus / Law covenant",
+        "text": "Exodus=1513_BCE; Law_Covenant=1513_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-1473"
+      },
+      "text": {
+        "headline": "Israel enters Canaan",
+        "text": "Israel_enters_Canaan=1473_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-1117"
+      },
+      "text": {
+        "headline": "Saul begins reign",
+        "text": "Saul_begins_reign=1117_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-1077"
+      },
+      "text": {
+        "headline": "David reigns",
+        "text": "David_reigns=1077–1037_BCE."
+      },
+      "group": "Adamic History",
+      "end_date": {
+        "year": "-1037"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-1037"
+      },
+      "text": {
+        "headline": "Solomon reigns",
+        "text": "Solomon_reigns=1037–998_BCE."
+      },
+      "group": "Adamic History",
+      "end_date": {
+        "year": "-998"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-1026"
+      },
+      "text": {
+        "headline": "Temple completed",
+        "text": "Temple_completed=1026_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-900"
+      },
+      "text": {
+        "headline": "Egypt vs Assyria (South)",
+        "text": "(Generated layer)"
+      },
+      "group": "King of North/South",
+      "end_date": {
+        "year": "-600"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-800"
+      },
+      "text": {
+        "headline": "Joel written (approx.)",
+        "text": "Author=Joel; Core=Day_of_Jehovah; Verses=Joel 2–3; Fulfillment_window=Last_days–Future (JW framework)."
+      },
+      "group": "Prophecy Meta",
+      "end_date": {
+        "year": "-700"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-740"
+      },
+      "text": {
+        "headline": "Isaiah written (approx.)",
+        "text": "Author=Isaiah; Clusters=Messianic|Judgment|Restoration; Verses include Isaiah 7,9,11,53; 13,14,47; 2:2-4; 35; 65."
+      },
+      "group": "Prophecy Meta",
+      "end_date": {
+        "year": "-680"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-700"
+      },
+      "text": {
+        "headline": "Great Wall (Warring States)",
+        "text": "(Generated layer)"
+      },
+      "group": "Cultural Megaprojects",
+      "end_date": {
+        "year": "-221"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-613"
+      },
+      "text": {
+        "headline": "Ezekiel written (approx.)",
+        "text": "Author=Ezekiel; Core=Gog of Magog; Verses=Ezekiel 38–39; Fulfillment=future (JW framework)."
+      },
+      "group": "Prophecy Meta",
+      "end_date": {
+        "year": "-591"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-607"
+      },
+      "text": {
+        "headline": "Jerusalem destroyed (JW chronology anchor)",
+        "text": "Jerusalem_destroyed=607_BCE; Gentile_Times_start=607_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-605"
+      },
+      "text": {
+        "headline": "Daniel written (approx.)",
+        "text": "Author=Daniel; Key sections=Daniel 2,4,7,9,11–12; Fulfillment windows include 607 BCE–1914 CE (JW Gentile Times) and 29–33 CE (Messiah)."
+      },
+      "group": "Prophecy Meta",
+      "end_date": {
+        "year": "-536"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-600"
+      },
+      "text": {
+        "headline": "Babylon vs Egypt (North)",
+        "text": "(Generated layer)"
+      },
+      "group": "King of North/South",
+      "end_date": {
+        "year": "-539"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-539"
+      },
+      "text": {
+        "headline": "Medo-Persia vs Greece (North)",
+        "text": "(Generated layer)"
+      },
+      "group": "King of North/South",
+      "end_date": {
+        "year": "-331"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-537"
+      },
+      "text": {
+        "headline": "Exile ends",
+        "text": "Exile_ends=537_BCE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "-520"
+      },
+      "text": {
+        "headline": "Zechariah written (approx.)",
+        "text": "Author=Zechariah; Core=nations conflict; Verses=Zechariah 12,14; Fulfillment=future (JW framework)."
+      },
+      "group": "Prophecy Meta",
+      "end_date": {
+        "year": "-518"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-455"
+      },
+      "text": {
+        "headline": "Daniel 9 — Seventy Weeks start (JW anchor)",
+        "text": "Seventy_Weeks_start=455_BCE; Verses=Daniel 9:24–27."
+      },
+      "group": "Prophecy Meta"
+    },
+    {
+      "start_date": {
+        "year": "-323"
+      },
+      "text": {
+        "headline": "Ptolemies vs Seleucids (Both)",
+        "text": "(Generated layer)"
+      },
+      "group": "King of North/South",
+      "end_date": {
+        "year": "-168"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-323"
+      },
+      "text": {
+        "headline": "Dan 11:5: Ptolemaic Egypt (South)",
+        "text": "(Generated layer)"
+      },
+      "group": "Daniel 11 (K of N/S)",
+      "end_date": {
+        "year": "-246"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-300"
+      },
+      "text": {
+        "headline": "Roman roads network",
+        "text": "(Generated layer)"
+      },
+      "group": "Cultural Megaprojects",
+      "end_date": {
+        "year": "400"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-246"
+      },
+      "text": {
+        "headline": "Dan 11:6–9: Seleucid Syria (North)",
+        "text": "(Generated layer)"
+      },
+      "group": "Daniel 11 (K of N/S)",
+      "end_date": {
+        "year": "-200"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-223"
+      },
+      "text": {
+        "headline": "Dan 11:10–15: Antiochus III",
+        "text": "(Generated layer)"
+      },
+      "group": "Daniel 11 (K of N/S)",
+      "end_date": {
+        "year": "-187"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-221"
+      },
+      "text": {
+        "headline": "Great Wall (Qin)",
+        "text": "(Generated layer)"
+      },
+      "group": "Cultural Megaprojects",
+      "end_date": {
+        "year": "-206"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-206"
+      },
+      "text": {
+        "headline": "Great Wall (Han)",
+        "text": "(Generated layer)"
+      },
+      "group": "Cultural Megaprojects",
+      "end_date": {
+        "year": "220"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-187"
+      },
+      "text": {
+        "headline": "Dan 11:16: Rome enters",
+        "text": "(Generated layer)"
+      },
+      "group": "Daniel 11 (K of N/S)",
+      "end_date": {
+        "year": "-63"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-146"
+      },
+      "text": {
+        "headline": "Rome (Imperial) (North)",
+        "text": "(Generated layer)"
+      },
+      "group": "King of North/South",
+      "end_date": {
+        "year": "476"
+      }
+    },
+    {
+      "start_date": {
+        "year": "-63"
+      },
+      "text": {
+        "headline": "Dan 11:21–35: Imperial Rome",
+        "text": "(Generated layer)"
+      },
+      "group": "Daniel 11 (K of N/S)",
+      "end_date": {
+        "year": "313"
+      }
+    },
+    {
+      "start_date": {
+        "year": "29"
+      },
+      "text": {
+        "headline": "Jesus baptized / Messiah appears (JW Daniel 9 fulfillment)",
+        "text": "Jesus_baptized=29_CE; Messiah_Appears=29_CE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "33"
+      },
+      "text": {
+        "headline": "Jesus dies / Messiah cut off; Christian congregation begins",
+        "text": "Jesus_dies=33_CE; Messiah_Cut_Off=33_CE; Congregation_founded=33_CE; Heavenly_calling_begins=33_CE."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "51"
+      },
+      "text": {
+        "headline": "2 Thessalonians written (Man of Lawlessness)",
+        "text": "Author=Paul; Verses=2 Thessalonians 2; Fulfillment=post-apostolic–future (JW framework)."
+      },
+      "group": "Prophecy Meta"
+    },
+    {
+      "start_date": {
+        "year": "72"
+      },
+      "text": {
+        "headline": "Colosseum",
+        "text": "(Generated layer)"
+      },
+      "group": "Cultural Megaprojects",
+      "end_date": {
+        "year": "80"
+      }
+    },
+    {
+      "start_date": {
+        "year": "96"
+      },
+      "text": {
+        "headline": "Revelation written",
+        "text": "Author=John; Verses=Revelation; Fulfillment emphasis=1914–future (JW framework)."
+      },
+      "group": "Prophecy Meta"
+    },
+    {
+      "start_date": {
+        "year": "1440"
+      },
+      "text": {
+        "headline": "Printing press (Gutenberg)",
+        "text": "(Generated layer)"
+      },
+      "group": "Cultural Megaprojects",
+      "end_date": {
+        "year": "1500"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1760"
+      },
+      "text": {
+        "headline": "Anglo-American (North)",
+        "text": "(Generated layer)"
+      },
+      "group": "King of North/South",
+      "end_date": {
+        "year": "2026"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1760"
+      },
+      "text": {
+        "headline": "Dan 11:36–39: Modern North (Anglo-American)",
+        "text": "(Generated layer)"
+      },
+      "group": "Daniel 11 (K of N/S)",
+      "end_date": {
+        "year": "2026"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1852"
+      },
+      "text": {
+        "headline": "Russell",
+        "text": "(Generated layer)"
+      },
+      "group": "Anointed Lifespans",
+      "end_date": {
+        "year": "1916"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1869"
+      },
+      "text": {
+        "headline": "Rutherford",
+        "text": "(Generated layer)"
+      },
+      "group": "Anointed Lifespans",
+      "end_date": {
+        "year": "1942"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1870"
+      },
+      "text": {
+        "headline": "Bible Student movement / restoration period (JW)",
+        "text": "Restoration_Period=1870s; Bible_Student_Movement=1870s."
+      },
+      "group": "JW Org"
+    },
+    {
+      "start_date": {
+        "year": "1893"
+      },
+      "text": {
+        "headline": "Frederick W. Franz born (reference anchor)",
+        "text": "Frederick_Franz_born=1893_CE; alive_in_1914=true; died_in_1992=true."
+      },
+      "group": "JW Org"
+    },
+    {
+      "start_date": {
+        "year": "1893"
+      },
+      "text": {
+        "headline": "Franz",
+        "text": "(Generated layer)"
+      },
+      "group": "Anointed Lifespans",
+      "end_date": {
+        "year": "1992"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1905"
+      },
+      "text": {
+        "headline": "Knorr",
+        "text": "(Generated layer)"
+      },
+      "group": "Anointed Lifespans",
+      "end_date": {
+        "year": "1977"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1914"
+      },
+      "text": {
+        "headline": "Gentile Times end / Christ presence begins (JW)",
+        "text": "Gentile_Times_end=1914_CE; Christ_Presence_Begins=1914_CE."
+      },
+      "group": "JW Prophecy"
+    },
+    {
+      "start_date": {
+        "year": "1919"
+      },
+      "text": {
+        "headline": "Faithful and discreet slave appointed (JW)",
+        "text": "Faithful_Slave_Appointed=1919_CE."
+      },
+      "group": "JW Org"
+    },
+    {
+      "start_date": {
+        "year": "1920"
+      },
+      "text": {
+        "headline": "Late overlap cohort",
+        "text": "(Generated layer)"
+      },
+      "group": "Anointed Lifespans",
+      "end_date": {
+        "year": "2050"
+      }
+    },
+    {
+      "start_date": {
+        "year": "1992"
+      },
+      "text": {
+        "headline": "Frederick W. Franz dies",
+        "text": "Frederick_Franz_died=1992_CE; reference_anchor_only=true."
+      },
+      "group": "JW Org"
+    },
+    {
+      "start_date": {
+        "year": "2026"
+      },
+      "text": {
+        "headline": "Minimum envelope year (non-doctrinal)",
+        "text": "Minimum_end≈2026; Based_on=1992 overlap + minimum anointing age ≈20; Status=Analytical_only."
+      },
+      "group": "Demographic"
+    },
+    {
+      "start_date": {
+        "year": "2026"
+      },
+      "text": {
+        "headline": "Current year",
+        "text": "Current_year=2026_CE; Total_years_since_Adam≈6050."
+      },
+      "group": "Adamic History"
+    },
+    {
+      "start_date": {
+        "year": "2080"
+      },
+      "text": {
+        "headline": "Reasonable envelope (non-doctrinal)",
+        "text": "Reasonable_end≈2080–2095; Assumption=lifespan ≈85–100; Status=Analytical_only."
+      },
+      "group": "Demographic",
+      "end_date": {
+        "year": "2095"
+      }
+    },
+    {
+      "start_date": {
+        "year": "2150"
+      },
+      "text": {
+        "headline": "Extreme envelope (non-doctrinal)",
+        "text": "Extreme_end≈2150–2160; Assumption=lifespan ≈115–122; Status=Analytical_only."
+      },
+      "group": "Demographic",
+      "end_date": {
+        "year": "2160"
+      }
+    }
+  ]
+}
