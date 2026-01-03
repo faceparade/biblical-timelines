@@ -1,0 +1,119 @@
+{
+  "title": {
+    "text": {
+      "headline": "Human / Prophetic Timeline (anchors, periods, and overlap envelopes)",
+      "text": "BCE years are negative. Groups separate Bible-history anchors, prophecy intervals, JW reference anchors, and explicitly non-doctrinal demographic envelopes."
+    }
+  },
+  "events": [
+    {
+      "start_date": { "year": -4026 },
+      "text": { "headline": "Adam", "text": "Adamic / Bible-history anchor." },
+      "group": "Adamic / Bible-history anchors"
+    },
+    {
+      "start_date": { "year": -2370 },
+      "text": { "headline": "Flood", "text": "Adamic / Bible-history anchor." },
+      "group": "Adamic / Bible-history anchors"
+    },
+    {
+      "start_date": { "year": -2018 },
+      "text": { "headline": "Abraham born", "text": "Adamic / Bible-history anchor." },
+      "group": "Adamic / Bible-history anchors"
+    },
+    {
+      "start_date": { "year": -1513 },
+      "text": { "headline": "Exodus", "text": "Adamic / Bible-history anchor." },
+      "group": "Adamic / Bible-history anchors"
+    },
+    {
+      "start_date": { "year": -1077 },
+      "end_date": { "year": -1037 },
+      "text": {
+        "headline": "David reign → Solomon reign (overlap window)",
+        "text": "Bible-history anchors shown as an interval window here to match your graphic’s clustered placement."
+      },
+      "group": "Adamic / Bible-history anchors"
+    },
+    {
+      "start_date": { "year": -607 },
+      "text": {
+        "headline": "Jerusalem destroyed (JW anchor)",
+        "text": "Used as a prophetic framework anchor in the JW model."
+      },
+      "group": "Adamic / Bible-history anchors"
+    },
+    {
+      "start_date": { "year": 29 },
+      "text": { "headline": "Jesus baptized", "text": "Adamic / Bible-history anchor." },
+      "group": "Adamic / Bible-history anchors"
+    },
+    {
+      "start_date": { "year": 33 },
+      "text": { "headline": "Jesus dies", "text": "Adamic / Bible-history anchor." },
+      "group": "Adamic / Bible-history anchors"
+    },
+
+    {
+      "start_date": { "year": -607 },
+      "end_date": { "year": 1914 },
+      "text": {
+        "headline": "Gentile Times (JW framework)",
+        "text": "Prophecy period shown as a fixed interval in the JW framework (start: Jerusalem destroyed; end: 1914)."
+      },
+      "group": "Prophecy periods (JW framework)"
+    },
+
+    {
+      "start_date": { "year": 1914 },
+      "text": { "headline": "1914", "text": "JW org / reference anchor." },
+      "group": "JW org / reference anchors"
+    },
+    {
+      "start_date": { "year": 1919 },
+      "text": { "headline": "1919", "text": "JW org / reference anchor." },
+      "group": "JW org / reference anchors"
+    },
+    {
+      "start_date": { "year": 1893 },
+      "end_date": { "year": 1992 },
+      "text": {
+        "headline": "Franz lifespan (anchor interval)",
+        "text": "Used as an overlap anchor in your non-doctrinal envelope reasoning. (Birth–death shown as an interval.)"
+      },
+      "group": "JW org / reference anchors"
+    },
+    {
+      "start_date": { "year": 1992 },
+      "text": {
+        "headline": "Overlap anchor: Franz dies (1992)",
+        "text": "Explicitly used in non-doctrinal envelope math as a crossover anchor point."
+      },
+      "group": "JW org / reference anchors"
+    },
+    {
+      "start_date": { "year": 2026 },
+      "text": { "headline": "2026", "text": "Right-edge marker shown in your graphic." },
+      "group": "JW org / reference anchors"
+    },
+
+    {
+      "start_date": { "year": 1914 },
+      "end_date": { "year": 2026 },
+      "text": {
+        "headline": "Reasonable envelope (non-doctrinal)",
+        "text": "Exploratory demographic/overlap envelope. Not doctrinal; meant as a plausibility band anchored by ordinary lifespan continuity."
+      },
+      "group": "Demographic envelope (non-doctrinal)"
+    },
+    {
+      "start_date": { "year": 1914 },
+      "end_date": { "year": 2026 },
+      "text": {
+        "headline": "Extreme envelope (non-doctrinal)",
+        "text": "Upper-bound exploratory envelope. Not asserted; shown as an extreme plausibility band."
+      },
+      "group": "Demographic envelope (non-doctrinal)"
+    }
+  ]
+}
