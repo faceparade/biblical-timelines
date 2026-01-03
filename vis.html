@@ -14,15 +14,20 @@
     header { padding: 12px 16px; font-weight: 600; border-bottom: 1px solid #ddd; }
     #timeline { height: calc(100vh - 52px); }
 
-    /* Make “background bands” feel like overlays, not primary objects */
-    .vis-item.demographic-band { opacity: 0.45; }
-    .vis-item.prophecy-band { opacity: 0.55; }
+    /* Background-ish overlays */
+    .vis-item.demographic-band { opacity: 0.38; }
+    .vis-item.prophecy-band { opacity: 0.48; }
+    .vis-item.meta-band { opacity: 0.45; }
 
-    /* Points slightly bolder for readability */
+    /* Make labels readable without exploding layout */
+    .vis-item .vis-item-content {
+      max-width: 420px;
+      white-space: normal;     /* allow wrapping */
+      line-height: 1.15;
+    }
+
+    /* Points: a bit bolder so anchors pop */
     .vis-item.vis-point .vis-item-content { font-weight: 600; }
-
-    /* Keep long labels from exploding */
-    .vis-item-content { max-width: 360px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   </style>
 </head>
 
@@ -36,7 +41,7 @@
 
   <div id="timeline"></div>
 
-  <!-- Cache-buster: bump v= whenever you edit vis-data.js -->
-  <script src="./vis-data.js?v=3"></script>
+  <!-- Cache-buster: bump v= when you update vis-data.js -->
+  <script src="./vis-data.js?v=4"></script>
 </body>
 </html>
