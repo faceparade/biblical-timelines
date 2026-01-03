@@ -28,16 +28,28 @@ const items = new vis.DataSet([
 const container = document.getElementById('timeline');
 
 const options = {
-  stack: false,
+  // IMPORTANT: stacking prevents overlaps in the same lane from covering each other
+  stack: true,
+
+  // scrolling / navigation
   horizontalScroll: true,
   verticalScroll: true,
+  zoomKey: 'ctrlKey', // makes zoom happen only when Ctrl is held (prevents accidental zoom)
 
-  // your originals are fine; adding initial window helps it "show something" immediately
-  zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
-  zoomMax: 1000 * 60 * 60 * 24 * 365 * 10000,
+  // HARD CLAMPS: prevent “gridline explosion” when data gets big
+  min: dateY(-5000),
+  max: dateY(2500),
 
+  // initial viewport
   start: dateY(-4500),
-  end: dateY(2100)
+  end: dateY(2100),
+
+  // zoom bounds (adjust later if you want)
+  zoomMin: 1000 * 60 * 60 * 24 * 365 * 2,      // ~2 years
+  zoomMax: 1000 * 60 * 60 * 24 * 365 * 12000,  // ~12,000 years
+
+  // axis / labels readability
+  orientation: { axis: 'top' }
 };
 
 new vis.Timeline(container, items, groups, options);
