@@ -1,136 +1,43 @@
-// Auto-generated from human_prophetic_expanded.timeline.json
-// vis-timeline data: groups (lanes) + items (events/spans)
-
-// Robust BCE/CE date construction (avoids Date parsing quirks with negative years)
-function dateYMD(year, month=1, day=1) {
-  const d = new Date(Date.UTC(0, 0, 1));
-  d.setUTCFullYear(year, month - 1, day);
+// --- Safe BCE/CE date constructor (UTC, supports negative years) ---
+function dateY(year, month = 1, day = 1) {
+  const d = new Date(Date.UTC(0, month - 1, day));
+  d.setUTCFullYear(Number(year));
+  d.setUTCMonth(month - 1);
+  d.setUTCDate(day);
   return d;
 }
 
+// Groups = rows / lanes
 const groups = new vis.DataSet([
-  { id: "adamic_history", content: "Adamic History" },
-  { id: "anointed_lifespans", content: "Anointed Lifespans" },
-  { id: "cultural_megaprojects", content: "Cultural Megaprojects" },
-  { id: "daniel_11_k_of_n_s", content: "Daniel 11 (K of N/S)" },
-  { id: "demographic", content: "Demographic" },
-  { id: "genesis_10_nations", content: "Genesis 10 Nations" },
-  { id: "jw_org", content: "JW Org" },
-  { id: "jw_prophecy", content: "JW Prophecy" },
-  { id: "king_of_north_south", content: "King of North/South" },
-  { id: "patriarch_lifespans", content: "Patriarch Lifespans" },
-  { id: "prophecy_meta", content: "Prophecy Meta" }
+  { id: 'patriarchs', content: 'Patriarch Lifespans' },
+  { id: 'kings', content: 'Kings / Reigns' },
+  { id: 'prophecy', content: 'Prophecy Periods (JW framework)' },
+  { id: 'org', content: 'JW Reference Anchors' },
+  { id: 'envelope', content: 'Demographic Envelopes (non-doctrinal)' }
 ]);
 
+// Items = events or spans
 const items = new vis.DataSet([
-  { id: 1, group: "adamic_history", content: "Adam created — Beginning of Man", title: "Adam created — Beginning of Man<br><b>Year:</b> -4026<br>Adam_created=4026_BCE; Human_history_starts=Adam; Moral_accountability_begins=Adam.", start: dateYMD(-4026,1,1) },
-  { id: 2, group: "patriarch_lifespans", content: "Adam", title: "Adam<br><b>Range:</b> -4026 to -3096<br>(Generated layer)", start: dateYMD(-4026,1,1), end: dateYMD(-3096,1,1) },
-  { id: 3, group: "patriarch_lifespans", content: "Seth", title: "Seth<br><b>Range:</b> -3896 to -2984<br>(Generated layer)", start: dateYMD(-3896,1,1), end: dateYMD(-2984,1,1) },
-  { id: 4, group: "patriarch_lifespans", content: "Enosh", title: "Enosh<br><b>Range:</b> -3766 to -2861<br>(Generated layer)", start: dateYMD(-3766,1,1), end: dateYMD(-2861,1,1) },
-  { id: 5, group: "patriarch_lifespans", content: "Kenan", title: "Kenan<br><b>Range:</b> -3676 to -2766<br>(Generated layer)", start: dateYMD(-3676,1,1), end: dateYMD(-2766,1,1) },
-  { id: 6, group: "patriarch_lifespans", content: "Mahalalel", title: "Mahalalel<br><b>Range:</b> -3606 to -2711<br>(Generated layer)", start: dateYMD(-3606,1,1), end: dateYMD(-2711,1,1) },
-  { id: 7, group: "patriarch_lifespans", content: "Jared", title: "Jared<br><b>Range:</b> -3541 to -2579<br>(Generated layer)", start: dateYMD(-3541,1,1), end: dateYMD(-2579,1,1) },
-  { id: 8, group: "patriarch_lifespans", content: "Enoch", title: "Enoch<br><b>Range:</b> -3389 to -3024<br>(Generated layer)", start: dateYMD(-3389,1,1), end: dateYMD(-3024,1,1) },
-  { id: 9, group: "patriarch_lifespans", content: "Methuselah", title: "Methuselah<br><b>Range:</b> -3317 to -2348<br>(Generated layer)", start: dateYMD(-3317,1,1), end: dateYMD(-2348,1,1) },
-  { id: 10, group: "patriarch_lifespans", content: "Lamech", title: "Lamech<br><b>Range:</b> -3130 to -2353<br>(Generated layer)", start: dateYMD(-3130,1,1), end: dateYMD(-2353,1,1) },
-  { id: 11, group: "patriarch_lifespans", content: "Noah", title: "Noah<br><b>Range:</b> -2974 to -2024<br>(Generated layer)", start: dateYMD(-2974,1,1), end: dateYMD(-2024,1,1) },
-  { id: 12, group: "patriarch_lifespans", content: "Shem", title: "Shem<br><b>Range:</b> -2474 to -1874<br>(Generated layer)", start: dateYMD(-2474,1,1), end: dateYMD(-1874,1,1) },
-  { id: 13, group: "patriarch_lifespans", content: "Arpachshad", title: "Arpachshad<br><b>Range:</b> -2374 to -1936<br>(Generated layer)", start: dateYMD(-2374,1,1), end: dateYMD(-1936,1,1) },
-  { id: 14, group: "adamic_history", content: "Flood", title: "Flood<br><b>Year:</b> -2370<br>Flood=2370_BCE; Years_Adam_to_Flood=1656.", start: dateYMD(-2370,1,1) },
-  { id: 15, group: "patriarch_lifespans", content: "Salah", title: "Salah<br><b>Range:</b> -2309 to -1876<br>(Generated layer)", start: dateYMD(-2309,1,1), end: dateYMD(-1876,1,1) },
-  { id: 16, group: "genesis_10_nations", content: "Japheth → Europe / Indo-European regions", title: "Japheth → Europe / Indo-European regions<br><b>Range:</b> -2300 to 0<br>(Generated layer)", start: dateYMD(-2300,1,1), end: dateYMD(0,1,1) },
-  { id: 17, group: "genesis_10_nations", content: "Shem → Semitic peoples", title: "Shem → Semitic peoples<br><b>Range:</b> -2300 to 0<br>(Generated layer)", start: dateYMD(-2300,1,1), end: dateYMD(0,1,1) },
-  { id: 18, group: "genesis_10_nations", content: "Ham → Africa / Canaan", title: "Ham → Africa / Canaan<br><b>Range:</b> -2300 to 0<br>(Generated layer)", start: dateYMD(-2300,1,1), end: dateYMD(0,1,1) },
-  { id: 19, group: "patriarch_lifespans", content: "Eber", title: "Eber<br><b>Range:</b> -2279 to -1815<br>(Generated layer)", start: dateYMD(-2279,1,1), end: dateYMD(-1815,1,1) },
-  { id: 20, group: "patriarch_lifespans", content: "Peleg", title: "Peleg<br><b>Range:</b> -2249 to -2009<br>(Generated layer)", start: dateYMD(-2249,1,1), end: dateYMD(-2009,1,1) },
-  { id: 21, group: "patriarch_lifespans", content: "Reu", title: "Reu<br><b>Range:</b> -2219 to -1980<br>(Generated layer)", start: dateYMD(-2219,1,1), end: dateYMD(-1980,1,1) },
-  { id: 22, group: "genesis_10_nations", content: "Gomer → Cimmerians / Europe", title: "Gomer → Cimmerians / Europe<br><b>Range:</b> -2200 to -500<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-500,1,1) },
-  { id: 23, group: "genesis_10_nations", content: "Magog → Scythians", title: "Magog → Scythians<br><b>Range:</b> -2200 to -300<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-300,1,1) },
-  { id: 24, group: "genesis_10_nations", content: "Madai → Medes", title: "Madai → Medes<br><b>Range:</b> -2200 to -550<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-550,1,1) },
-  { id: 25, group: "genesis_10_nations", content: "Javan → Greeks", title: "Javan → Greeks<br><b>Range:</b> -2200 to -146<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-146,1,1) },
-  { id: 26, group: "genesis_10_nations", content: "Tubal → Anatolia", title: "Tubal → Anatolia<br><b>Range:</b> -2200 to -500<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-500,1,1) },
-  { id: 27, group: "genesis_10_nations", content: "Meshech → Caucasus", title: "Meshech → Caucasus<br><b>Range:</b> -2200 to -300<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-300,1,1) },
-  { id: 28, group: "genesis_10_nations", content: "Tiras → Thracians", title: "Tiras → Thracians<br><b>Range:</b> -2200 to -500<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-500,1,1) },
-  { id: 29, group: "genesis_10_nations", content: "Elam → Elamites", title: "Elam → Elamites<br><b>Range:</b> -2200 to -539<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-539,1,1) },
-  { id: 30, group: "genesis_10_nations", content: "Asshur → Assyrians", title: "Asshur → Assyrians<br><b>Range:</b> -2200 to -612<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-612,1,1) },
-  { id: 31, group: "genesis_10_nations", content: "Arpachshad → Hebrews", title: "Arpachshad → Hebrews<br><b>Range:</b> -2200 to 70<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(70,1,1) },
-  { id: 32, group: "genesis_10_nations", content: "Aram → Arameans", title: "Aram → Arameans<br><b>Range:</b> -2200 to -500<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-500,1,1) },
-  { id: 33, group: "genesis_10_nations", content: "Cush → Ethiopia / Nubia", title: "Cush → Ethiopia / Nubia<br><b>Range:</b> -2200 to -500<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-500,1,1) },
-  { id: 34, group: "genesis_10_nations", content: "Mizraim → Egypt", title: "Mizraim → Egypt<br><b>Range:</b> -2200 to -30<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-30,1,1) },
-  { id: 35, group: "genesis_10_nations", content: "Put → Libya", title: "Put → Libya<br><b>Range:</b> -2200 to -500<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-500,1,1) },
-  { id: 36, group: "genesis_10_nations", content: "Canaan → Canaanites", title: "Canaan → Canaanites<br><b>Range:</b> -2200 to -1200<br>(Generated layer)", start: dateYMD(-2200,1,1), end: dateYMD(-1200,1,1) },
-  { id: 37, group: "patriarch_lifespans", content: "Serug", title: "Serug<br><b>Range:</b> -2187 to -1957<br>(Generated layer)", start: dateYMD(-2187,1,1), end: dateYMD(-1957,1,1) },
-  { id: 38, group: "patriarch_lifespans", content: "Nahor", title: "Nahor<br><b>Range:</b> -2157 to -2009<br>(Generated layer)", start: dateYMD(-2157,1,1), end: dateYMD(-2009,1,1) },
-  { id: 39, group: "patriarch_lifespans", content: "Terah", title: "Terah<br><b>Range:</b> -2128 to -1923<br>(Generated layer)", start: dateYMD(-2128,1,1), end: dateYMD(-1923,1,1) },
-  { id: 40, group: "adamic_history", content: "Abraham born", title: "Abraham born<br><b>Year:</b> -2018<br>Abraham_born=2018_BCE.", start: dateYMD(-2018,1,1) },
-  { id: 41, group: "patriarch_lifespans", content: "Abraham", title: "Abraham<br><b>Range:</b> -2018 to -1843<br>(Generated layer)", start: dateYMD(-2018,1,1), end: dateYMD(-1843,1,1) },
-  { id: 42, group: "adamic_history", content: "Abraham enters Canaan / Abrahamic covenant anchor", title: "Abraham enters Canaan / Abrahamic covenant anchor<br><b>Year:</b> -1943<br>Abraham_enters_Canaan=1943_BCE; Abrahamic_Covenant=1943_BCE.", start: dateYMD(-1943,1,1) },
-  { id: 43, group: "adamic_history", content: "Exodus / Law covenant", title: "Exodus / Law covenant<br><b>Year:</b> -1513<br>Exodus=1513_BCE; Law_Covenant=1513_BCE.", start: dateYMD(-1513,1,1) },
-  { id: 44, group: "adamic_history", content: "Israel enters Canaan", title: "Israel enters Canaan<br><b>Year:</b> -1473<br>Israel_enters_Canaan=1473_BCE.", start: dateYMD(-1473,1,1) },
-  { id: 45, group: "adamic_history", content: "Saul begins reign", title: "Saul begins reign<br><b>Year:</b> -1117<br>Saul_begins_reign=1117_BCE.", start: dateYMD(-1117,1,1) },
-  { id: 46, group: "adamic_history", content: "David reigns", title: "David reigns<br><b>Range:</b> -1077 to -1037<br>David_reigns=1077–1037_BCE.", start: dateYMD(-1077,1,1), end: dateYMD(-1037,1,1) },
-  { id: 47, group: "adamic_history", content: "Solomon reigns", title: "Solomon reigns<br><b>Range:</b> -1037 to -998<br>Solomon_reigns=1037–998_BCE.", start: dateYMD(-1037,1,1), end: dateYMD(-998,1,1) },
-  { id: 48, group: "adamic_history", content: "Temple completed", title: "Temple completed<br><b>Year:</b> -1026<br>Temple_completed=1026_BCE.", start: dateYMD(-1026,1,1) },
-  { id: 49, group: "king_of_north_south", content: "Egypt vs Assyria (South)", title: "Egypt vs Assyria (South)<br><b>Range:</b> -900 to -600<br>(Generated layer)", start: dateYMD(-900,1,1), end: dateYMD(-600,1,1) },
-  { id: 50, group: "prophecy_meta", content: "Joel written (approx.)", title: "Joel written (approx.)<br><b>Range:</b> -800 to -700<br>Author=Joel; Core=Day_of_Jehovah; Verses=Joel 2–3; Fulfillment_window=Last_days–Future (JW framework).", start: dateYMD(-800,1,1), end: dateYMD(-700,1,1) },
-  { id: 51, group: "prophecy_meta", content: "Isaiah written (approx.)", title: "Isaiah written (approx.)<br><b>Range:</b> -740 to -680<br>Author=Isaiah; Clusters=Messianic|Judgment|Restoration; Verses include Isaiah 7,9,11,53; 13,14,47; 2:2-4; 35; 65.", start: dateYMD(-740,1,1), end: dateYMD(-680,1,1) },
-  { id: 52, group: "cultural_megaprojects", content: "Great Wall (Warring States)", title: "Great Wall (Warring States)<br><b>Range:</b> -700 to -221<br>(Generated layer)", start: dateYMD(-700,1,1), end: dateYMD(-221,1,1) },
-  { id: 53, group: "prophecy_meta", content: "Ezekiel written (approx.)", title: "Ezekiel written (approx.)<br><b>Range:</b> -613 to -591<br>Author=Ezekiel; Core=Gog of Magog; Verses=Ezekiel 38–39; Fulfillment=future (JW framework).", start: dateYMD(-613,1,1), end: dateYMD(-591,1,1) },
-  { id: 54, group: "adamic_history", content: "Jerusalem destroyed (JW chronology anchor)", title: "Jerusalem destroyed (JW chronology anchor)<br><b>Year:</b> -607<br>Jerusalem_destroyed=607_BCE; Gentile_Times_start=607_BCE.", start: dateYMD(-607,1,1) },
-  { id: 55, group: "prophecy_meta", content: "Daniel written (approx.)", title: "Daniel written (approx.)<br><b>Range:</b> -605 to -536<br>Author=Daniel; Key sections=Daniel 2,4,7,9,11–12; Fulfillment windows include 607 BCE–1914 CE (JW Gentile Times) and 29–33 CE (Messiah).", start: dateYMD(-605,1,1), end: dateYMD(-536,1,1) },
-  { id: 56, group: "king_of_north_south", content: "Babylon vs Egypt (North)", title: "Babylon vs Egypt (North)<br><b>Range:</b> -600 to -539<br>(Generated layer)", start: dateYMD(-600,1,1), end: dateYMD(-539,1,1) },
-  { id: 57, group: "king_of_north_south", content: "Medo-Persia vs Greece (North)", title: "Medo-Persia vs Greece (North)<br><b>Range:</b> -539 to -331<br>(Generated layer)", start: dateYMD(-539,1,1), end: dateYMD(-331,1,1) },
-  { id: 58, group: "adamic_history", content: "Exile ends", title: "Exile ends<br><b>Year:</b> -537<br>Exile_ends=537_BCE.", start: dateYMD(-537,1,1) },
-  { id: 59, group: "prophecy_meta", content: "Zechariah written (approx.)", title: "Zechariah written (approx.)<br><b>Range:</b> -520 to -518<br>Author=Zechariah; Core=nations conflict; Verses=Zechariah 12,14; Fulfillment=future (JW framework).", start: dateYMD(-520,1,1), end: dateYMD(-518,1,1) },
-  { id: 60, group: "prophecy_meta", content: "Daniel 9 — Seventy Weeks start (JW anchor)", title: "Daniel 9 — Seventy Weeks start (JW anchor)<br><b>Year:</b> -455<br>Seventy_Weeks_start=455_BCE; Verses=Daniel 9:24–27.", start: dateYMD(-455,1,1) },
-  { id: 61, group: "king_of_north_south", content: "Ptolemies vs Seleucids (Both)", title: "Ptolemies vs Seleucids (Both)<br><b>Range:</b> -323 to -168<br>(Generated layer)", start: dateYMD(-323,1,1), end: dateYMD(-168,1,1) },
-  { id: 62, group: "daniel_11_k_of_n_s", content: "Dan 11:5: Ptolemaic Egypt (South)", title: "Dan 11:5: Ptolemaic Egypt (South)<br><b>Range:</b> -323 to -246<br>(Generated layer)", start: dateYMD(-323,1,1), end: dateYMD(-246,1,1) },
-  { id: 63, group: "cultural_megaprojects", content: "Roman roads network", title: "Roman roads network<br><b>Range:</b> -300 to 400<br>(Generated layer)", start: dateYMD(-300,1,1), end: dateYMD(400,1,1) },
-  { id: 64, group: "daniel_11_k_of_n_s", content: "Dan 11:6–9: Seleucid Syria (North)", title: "Dan 11:6–9: Seleucid Syria (North)<br><b>Range:</b> -246 to -200<br>(Generated layer)", start: dateYMD(-246,1,1), end: dateYMD(-200,1,1) },
-  { id: 65, group: "daniel_11_k_of_n_s", content: "Dan 11:10–15: Antiochus III", title: "Dan 11:10–15: Antiochus III<br><b>Range:</b> -223 to -187<br>(Generated layer)", start: dateYMD(-223,1,1), end: dateYMD(-187,1,1) },
-  { id: 66, group: "cultural_megaprojects", content: "Great Wall (Qin)", title: "Great Wall (Qin)<br><b>Range:</b> -221 to -206<br>(Generated layer)", start: dateYMD(-221,1,1), end: dateYMD(-206,1,1) },
-  { id: 67, group: "cultural_megaprojects", content: "Great Wall (Han)", title: "Great Wall (Han)<br><b>Range:</b> -206 to 220<br>(Generated layer)", start: dateYMD(-206,1,1), end: dateYMD(220,1,1) },
-  { id: 68, group: "daniel_11_k_of_n_s", content: "Dan 11:16: Rome enters", title: "Dan 11:16: Rome enters<br><b>Range:</b> -187 to -63<br>(Generated layer)", start: dateYMD(-187,1,1), end: dateYMD(-63,1,1) },
-  { id: 69, group: "king_of_north_south", content: "Rome (Imperial) (North)", title: "Rome (Imperial) (North)<br><b>Range:</b> -146 to 476<br>(Generated layer)", start: dateYMD(-146,1,1), end: dateYMD(476,1,1) },
-  { id: 70, group: "daniel_11_k_of_n_s", content: "Dan 11:21–35: Imperial Rome", title: "Dan 11:21–35: Imperial Rome<br><b>Range:</b> -63 to 313<br>(Generated layer)", start: dateYMD(-63,1,1), end: dateYMD(313,1,1) },
-  { id: 71, group: "adamic_history", content: "Jesus baptized / Messiah appears (JW Daniel 9 fulfillment)", title: "Jesus baptized / Messiah appears (JW Daniel 9 fulfillment)<br><b>Year:</b> 29<br>Jesus_baptized=29_CE; Messiah_Appears=29_CE.", start: dateYMD(29,1,1) },
-  { id: 72, group: "adamic_history", content: "Jesus dies / Messiah cut off; Christian congregation begins", title: "Jesus dies / Messiah cut off; Christian congregation begins<br><b>Year:</b> 33<br>Jesus_dies=33_CE; Messiah_Cut_Off=33_CE; Congregation_founded=33_CE; Heavenly_calling_begins=33_CE.", start: dateYMD(33,1,1) },
-  { id: 73, group: "prophecy_meta", content: "2 Thessalonians written (Man of Lawlessness)", title: "2 Thessalonians written (Man of Lawlessness)<br><b>Year:</b> 51<br>Author=Paul; Verses=2 Thessalonians 2; Fulfillment=post-apostolic–future (JW framework).", start: dateYMD(51,1,1) },
-  { id: 74, group: "cultural_megaprojects", content: "Colosseum", title: "Colosseum<br><b>Range:</b> 72 to 80<br>(Generated layer)", start: dateYMD(72,1,1), end: dateYMD(80,1,1) },
-  { id: 75, group: "prophecy_meta", content: "Revelation written", title: "Revelation written<br><b>Year:</b> 96<br>Author=John; Verses=Revelation; Fulfillment emphasis=1914–future (JW framework).", start: dateYMD(96,1,1) },
-  { id: 76, group: "cultural_megaprojects", content: "Printing press (Gutenberg)", title: "Printing press (Gutenberg)<br><b>Range:</b> 1440 to 1500<br>(Generated layer)", start: dateYMD(1440,1,1), end: dateYMD(1500,1,1) },
-  { id: 77, group: "king_of_north_south", content: "Anglo-American (North)", title: "Anglo-American (North)<br><b>Range:</b> 1760 to 2026<br>(Generated layer)", start: dateYMD(1760,1,1), end: dateYMD(2026,1,1) },
-  { id: 78, group: "daniel_11_k_of_n_s", content: "Dan 11:36–39: Modern North (Anglo-American)", title: "Dan 11:36–39: Modern North (Anglo-American)<br><b>Range:</b> 1760 to 2026<br>(Generated layer)", start: dateYMD(1760,1,1), end: dateYMD(2026,1,1) },
-  { id: 79, group: "anointed_lifespans", content: "Russell", title: "Russell<br><b>Range:</b> 1852 to 1916<br>(Generated layer)", start: dateYMD(1852,1,1), end: dateYMD(1916,1,1) },
-  { id: 80, group: "anointed_lifespans", content: "Rutherford", title: "Rutherford<br><b>Range:</b> 1869 to 1942<br>(Generated layer)", start: dateYMD(1869,1,1), end: dateYMD(1942,1,1) },
-  { id: 81, group: "jw_org", content: "Bible Student movement / restoration period (JW)", title: "Bible Student movement / restoration period (JW)<br><b>Year:</b> 1870<br>Restoration_Period=1870s; Bible_Student_Movement=1870s.", start: dateYMD(1870,1,1) },
-  { id: 82, group: "jw_org", content: "Frederick W. Franz born (reference anchor)", title: "Frederick W. Franz born (reference anchor)<br><b>Year:</b> 1893<br>Frederick_Franz_born=1893_CE; alive_in_1914=true; died_in_1992=true.", start: dateYMD(1893,1,1) },
-  { id: 83, group: "anointed_lifespans", content: "Franz", title: "Franz<br><b>Range:</b> 1893 to 1992<br>(Generated layer)", start: dateYMD(1893,1,1), end: dateYMD(1992,1,1) },
-  { id: 84, group: "anointed_lifespans", content: "Knorr", title: "Knorr<br><b>Range:</b> 1905 to 1977<br>(Generated layer)", start: dateYMD(1905,1,1), end: dateYMD(1977,1,1) },
-  { id: 85, group: "jw_prophecy", content: "Gentile Times end / Christ presence begins (JW)", title: "Gentile Times end / Christ presence begins (JW)<br><b>Year:</b> 1914<br>Gentile_Times_end=1914_CE; Christ_Presence_Begins=1914_CE.", start: dateYMD(1914,1,1) },
-  { id: 86, group: "jw_org", content: "Faithful and discreet slave appointed (JW)", title: "Faithful and discreet slave appointed (JW)<br><b>Year:</b> 1919<br>Faithful_Slave_Appointed=1919_CE.", start: dateYMD(1919,1,1) },
-  { id: 87, group: "anointed_lifespans", content: "Late overlap cohort", title: "Late overlap cohort<br><b>Range:</b> 1920 to 2050<br>(Generated layer)", start: dateYMD(1920,1,1), end: dateYMD(2050,1,1) },
-  { id: 88, group: "jw_org", content: "Frederick W. Franz dies", title: "Frederick W. Franz dies<br><b>Year:</b> 1992<br>Frederick_Franz_died=1992_CE; reference_anchor_only=true.", start: dateYMD(1992,1,1) },
-  { id: 89, group: "demographic", content: "Minimum envelope year (non-doctrinal)", title: "Minimum envelope year (non-doctrinal)<br><b>Year:</b> 2026<br>Minimum_end≈2026; Based_on=1992 overlap + minimum anointing age ≈20; Status=Analytical_only.", start: dateYMD(2026,1,1) },
-  { id: 90, group: "adamic_history", content: "Current year", title: "Current year<br><b>Year:</b> 2026<br>Current_year=2026_CE; Total_years_since_Adam≈6050.", start: dateYMD(2026,1,1) },
-  { id: 91, group: "demographic", content: "Reasonable envelope (non-doctrinal)", title: "Reasonable envelope (non-doctrinal)<br><b>Range:</b> 2080 to 2095<br>Reasonable_end≈2080–2095; Assumption=lifespan ≈85–100; Status=Analytical_only.", start: dateYMD(2080,1,1), end: dateYMD(2095,1,1) },
-  { id: 92, group: "demographic", content: "Extreme envelope (non-doctrinal)", title: "Extreme envelope (non-doctrinal)<br><b>Range:</b> 2150 to 2160<br>Extreme_end≈2150–2160; Assumption=lifespan ≈115–122; Status=Analytical_only.", start: dateYMD(2150,1,1), end: dateYMD(2160,1,1) }
+  { id: 1, group: 'patriarchs', content: 'Adam',  start: dateY(-4026), end: dateY(-3096) },
+  { id: 2, group: 'patriarchs', content: 'Noah',  start: dateY(-2970), end: dateY(-2020) },
+  { id: 3, group: 'prophecy',   content: 'Gentile Times', start: dateY(-607), end: dateY(1914) },
+  { id: 4, group: 'org',        content: '1914',  start: dateY(1914) },
+  { id: 5, group: 'envelope',   content: 'Reasonable overlap envelope', start: dateY(1914), end: dateY(2026) }
 ]);
 
 const container = document.getElementById('timeline');
 
 const options = {
-  stack: true,
+  stack: false,
   horizontalScroll: true,
   verticalScroll: true,
-  zoomKey: 'ctrlKey',
-  showCurrentTime: false,
-  tooltip: { followMouse: true },
-  orientation: 'both',
-  margin: { item: 6, axis: 10 },
-  // Start zoomed out enough to see large structure; user can zoom in
-  start: dateYMD(-4200,1,1),
-  end: dateYMD(2100,1,1)
+
+  // your originals are fine; adding initial window helps it "show something" immediately
+  zoomMin: 1000 * 60 * 60 * 24 * 365 * 10,
+  zoomMax: 1000 * 60 * 60 * 24 * 365 * 10000,
+
+  start: dateY(-4500),
+  end: dateY(2100)
 };
 
 new vis.Timeline(container, items, groups, options);
