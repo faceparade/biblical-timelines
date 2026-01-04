@@ -1,8 +1,8 @@
-title,group,start_year,end_year,description,class
-Adam — Beginning of Man,Human Moral History (Adamic),-4026,,Start of human moral history,adamic
-Flood begins,Human Moral History (Adamic),-2370,,Global Flood begins,flood
-Abraham born,Human Moral History (Adamic),-2018,,Birth of Abraham,abraham
-Exodus,Human Moral History (Adamic),-1513,,Israel leaves Egypt,exodus
-Jerusalem destroyed (JW anchor),Human Moral History (Adamic),-607,,Destruction of Jerusalem,jerusalem
-Jesus baptized,Human Moral History (Adamic),29,,Beginning of Jesus’ ministry,jesus
-Jesus dies,Human Moral History (Adamic),33,,Death of Jesus,jesus
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup
+adamic_anchor_adam,"Human Moral History (Adamic)","point",-4026,,,,,,"Adam","Adam — Beginning of Man; start of human moral history","adamic",""
+adamic_anchor_flood,"Human Moral History (Adamic)","point",-2370,,,,,,"Flood","Flood begins (Genesis 7:11)","flood",""
+adamic_anchor_abraham,"Human Moral History (Adamic)","point",-2018,,,,,,"Abraham","Abraham born","abraham",""
+adamic_anchor_exodus,"Human Moral History (Adamic)","point",-1513,,,,,,"Exodus","Exodus (Israel leaves Egypt)","exodus",""
+adamic_anchor_jerusalem,"Human Moral History (Adamic)","point",-607,,,,,,"Jerusalem","Jerusalem destroyed (JW anchor)","jerusalem",""
+adamic_anchor_jesus_baptized,"Human Moral History (Adamic)","point",29,,,,,,"Baptism","Jesus baptized","jesus",""
+adamic_anchor_jesus_dies,"Human Moral History (Adamic)","point",33,,,,,,"Crucifixion","Jesus dies","jesus",""

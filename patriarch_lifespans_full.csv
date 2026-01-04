@@ -1,11 +1,11 @@
-title,group,start_year,end_year,description,class
-Adam lifespan,Patriarch Lifespans,-4026,-3096,Adam lived 930 years,patriarch
-Seth lifespan,Patriarch Lifespans,-3896,-2984,Seth lived 912 years,patriarch
-Enosh lifespan,Patriarch Lifespans,-3791,-2896,Enosh lived 905 years,patriarch
-Kenan lifespan,Patriarch Lifespans,-3701,-2791,Kenan lived 910 years,patriarch
-Mahalalel lifespan,Patriarch Lifespans,-3631,-2736,Mahalalel lived 895 years,patriarch
-Jared lifespan,Patriarch Lifespans,-3556,-2594,Jared lived 962 years,patriarch
-Enoch lifespan,Patriarch Lifespans,-3394,-3039,Enoch lived 365 years,patriarch
-Methuselah lifespan,Patriarch Lifespans,-3327,-2348,Methuselah lived 969 years,patriarch
-Lamech lifespan,Patriarch Lifespans,-3140,-2375,Lamech lived 765 years,patriarch
-Noah lifespan,Patriarch Lifespans,-2970,-2020,Noah lived 950 years,patriarch
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup
+patriarch_adam,"Patriarch Lifespans","range",-4026,,,-3096,,,"Adam","Adam lifespan (930 years): -4026 to -3096","patriarch",""
+patriarch_seth,"Patriarch Lifespans","range",-3896,,,-2984,,,"Seth","Seth lifespan (912 years): -3896 to -2984","patriarch",""
+patriarch_enosh,"Patriarch Lifespans","range",-3791,,,-2896,,,"Enosh","Enosh lifespan (905 years): -3791 to -2896","patriarch",""
+patriarch_kenan,"Patriarch Lifespans","range",-3701,,,-2791,,,"Kenan","Kenan lifespan (910 years): -3701 to -2791","patriarch",""
+patriarch_mahalalel,"Patriarch Lifespans","range",-3631,,,-2736,,,"Mahalalel","Mahalalel lifespan (895 years): -3631 to -2736","patriarch",""
+patriarch_jared,"Patriarch Lifespans","range",-3556,,,-2594,,,"Jared","Jared lifespan (962 years): -3556 to -2594","patriarch",""
+patriarch_enoch,"Patriarch Lifespans","range",-3394,,,-3039,,,"Enoch","Enoch lifespan (365 years): -3394 to -3039","patriarch",""
+patriarch_methuselah,"Patriarch Lifespans","range",-3327,,,-2348,,,"Methuselah","Methuselah lifespan (969 years): -3327 to -2348","patriarch",""
+patriarch_lamech,"Patriarch Lifespans","range",-3140,,,-2375,,,"Lamech","Lamech lifespan (765 years): -3140 to -2375","patriarch",""
+patriarch_noah,"Patriarch Lifespans","range",-2970,,,-2020,,,"Noah","Noah lifespan (950 years): -2970 to -2020","patriarch",""
