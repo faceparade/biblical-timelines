@@ -171,13 +171,13 @@
   </header>
 
   <div id="layer-controls">
-    <label><input type="checkbox" data-group="adamic_anchors" checked>Anchors</label>
-    <label><input type="checkbox" data-group="adamic_details" checked>Details</label>
-    <label><input type="checkbox" data-group="patriarchs" checked>Patriarchs</label>
-    <label><input type="checkbox" data-group="nations" checked>Genesis 10</label>
-    <label><input type="checkbox" data-group="jw_prophecy" checked>JW Overlays</label>
-    <label><input type="checkbox" data-group="prophecy_meta" checked>Prophecy Meta</label>
-    <label><input type="checkbox" data-group="demographic" checked>Demographic Envelope</label>
+    <label><input type="checkbox" data-layer="anchors" data-group="adamic_anchors" checked>Anchors</label>
+    <label><input type="checkbox" data-layer="details" data-group="adamic_details" checked>Details</label>
+    <label><input type="checkbox" data-layer="patriarchs" data-group="patriarchs" checked>Patriarchs</label>
+    <label><input type="checkbox" data-layer="gen10" data-group="nations" checked>Genesis 10</label>
+    <label><input type="checkbox" data-layer="jw" data-group="jw_prophecy" checked>JW Overlays</label>
+    <label><input type="checkbox" data-layer="prophecy" data-group="prophecy_meta" checked>Prophecy Meta</label>
+    <label><input type="checkbox" data-layer="demo" data-group="demographic" checked>Demographic Envelope</label>
   </div>
 
   <div id="timeline"></div>
@@ -188,22 +188,80 @@
     (function () {
       const controls = document.getElementById("layer-controls");
       if (!controls) return;
+      const LAYER_KEY = "biblicalTimelineLayers";
+      const layerMap = new Map([
+        ["anchors", "adamic_anchors"],
+        ["details", "adamic_details"],
+        ["patriarchs", "patriarchs"],
+        ["gen10", "nations"],
+        ["jw", "jw_prophecy"],
+        ["prophecy", "prophecy_meta"],
+        ["demo", "demographic"]
+      ]);
       const checkboxes = Array.from(controls.querySelectorAll('input[type="checkbox"]'));
 
-      function applyGroups() {
+      function parseHashLayers() {
+        const hash = window.location.hash || "";
+        const match = hash.match(/layers=([^&]+)/);
+        if (!match) return null;
+        return match[1].split(",").map(s => s.trim()).filter(Boolean);
+      }
+
+      function parseStoredLayers() {
+        const raw = window.localStorage.getItem(LAYER_KEY);
+        if (!raw) return null;
+        return raw.split(",").map(s => s.trim()).filter(Boolean);
+      }
+
+      function normalizeLayers(list) {
+        const valid = (list || []).filter(token => layerMap.has(token));
+        if (valid.length === 0) {
+          return Array.from(layerMap.keys());
+        }
+        return valid;
+      }
+
+      function syncCheckboxes(activeTokens) {
+        const activeSet = new Set(activeTokens);
+        checkboxes.forEach(cb => {
+          const token = cb.dataset.layer;
+          cb.checked = activeSet.has(token);
+        });
+      }
+
+      function persistLayers(tokens) {
+        window.localStorage.setItem(LAYER_KEY, tokens.join(","));
+        window.location.hash = tokens.length ? `layers=${tokens.join(",")}` : "";
+      }
+
+      function applyGroupsFromCheckboxes() {
         if (!window.timeline || !window.timelineGroups) return;
-        const active = checkboxes.filter(cb => cb.checked).map(cb => cb.dataset.group);
+        let selected = checkboxes.filter(cb => cb.checked).map(cb => cb.dataset.layer);
+        // Ensure at least one layer stays on
+        if (selected.length === 0) {
+          const fallback = checkboxes.find(cb => cb.dataset.layer === "anchors");
+          if (fallback) {
+            fallback.checked = true;
+            selected = ["anchors"];
+          }
+        }
+        const groupsOn = selected.map(token => layerMap.get(token)).filter(Boolean);
         const filtered = window.timelineGroups.get({
-          filter: g => active.includes(g.id)
+          filter: g => groupsOn.includes(g.id)
         });
         window.timeline.setGroups(filtered);
+        persistLayers(selected);
       }
+
+      // Initialize from hash > localStorage > defaults
+      const initial = normalizeLayers(parseHashLayers() || parseStoredLayers());
+      syncCheckboxes(initial);
 
       const timer = setInterval(() => {
         if (window.timeline && window.timelineGroups) {
           clearInterval(timer);
-          checkboxes.forEach(cb => cb.addEventListener("change", applyGroups));
-          applyGroups();
+          checkboxes.forEach(cb => cb.addEventListener("change", applyGroupsFromCheckboxes));
+          applyGroupsFromCheckboxes();
         }
       }, 100);
     })();
