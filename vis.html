@@ -53,6 +53,36 @@
     #layer-controls input[type="checkbox"] {
       accent-color: #78a5ff;
     }
+    #zoom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 6px 16px 4px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+    .zoom-btn {
+      background: rgba(120,165,255,0.12);
+      color: var(--text);
+      border: 1px solid rgba(120,165,255,0.25);
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .zoom-btn:hover {
+      background: rgba(120,165,255,0.2);
+    }
+    #legend {
+      padding: 6px 16px 10px;
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
     .note { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 10px; }
     #timeline { height: calc(100vh - 90px); }
 
@@ -179,6 +209,19 @@
     <label><input type="checkbox" data-layer="prophecy" data-group="prophecy_meta" checked>Prophecy Meta</label>
     <label><input type="checkbox" data-layer="demo" data-group="demographic" checked>Demographic Envelope</label>
   </div>
+  <div id="zoom-bar">
+    <button class="zoom-btn" data-fit="all">Fit All</button>
+    <button class="zoom-btn" data-fit="adamic">Fit Adamic</button>
+    <button class="zoom-btn" data-fit="gentile">Fit Gentile Times</button>
+    <button class="zoom-btn" data-fit="modern">Fit Modern</button>
+  </div>
+  <div id="legend">
+    <span>Era bands = context scaffold (non-doctrinal)</span>
+    <span>Patriarch lifespans = genealogical ranges</span>
+    <span>JW overlays = interpretive bands</span>
+    <span>Demographic envelope = non-doctrinal atmosphere</span>
+    <span>Prophecy meta = written vs fulfillment windows</span>
+  </div>
 
   <div id="timeline"></div>
 
@@ -253,6 +296,31 @@
         persistLayers(selected);
       }
 
+      function dateYear(year, month = 1, day = 1) {
+        const d = new Date(Date.UTC(0, month - 1, day));
+        d.setUTCFullYear(Number(year));
+        return d;
+      }
+
+      function attachZoomButtons() {
+        const bar = document.getElementById("zoom-bar");
+        if (!bar || !window.timeline) return;
+        bar.addEventListener("click", (e) => {
+          const btn = e.target.closest(".zoom-btn");
+          if (!btn) return;
+          const mode = btn.dataset.fit;
+          if (mode === "all") {
+            window.timeline.fit({ animation: true });
+          } else if (mode === "adamic") {
+            window.timeline.setWindow(dateYear(-4026, 1, 1), dateYear(2026, 12, 31), { animation: true });
+          } else if (mode === "gentile") {
+            window.timeline.setWindow(dateYear(-607, 1, 1), dateYear(1914, 12, 31), { animation: true });
+          } else if (mode === "modern") {
+            window.timeline.setWindow(dateYear(1914, 1, 1), dateYear(2026, 12, 31), { animation: true });
+          }
+        });
+      }
+
       // Initialize from hash > localStorage > defaults
       const initial = normalizeLayers(parseHashLayers() || parseStoredLayers());
       syncCheckboxes(initial);
@@ -262,6 +330,7 @@
           clearInterval(timer);
           checkboxes.forEach(cb => cb.addEventListener("change", applyGroupsFromCheckboxes));
           applyGroupsFromCheckboxes();
+          attachZoomButtons();
         }
       }, 100);
     })();
