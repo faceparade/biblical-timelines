@@ -63,6 +63,14 @@ function parseIntField(value) {
   return Number.isFinite(num) ? num : NaN;
 }
 
+function parseLabelThreshold(value) {
+  if (value === undefined || value === null) return undefined;
+  const trimmed = String(value).trim();
+  if (!trimmed) return undefined;
+  const num = Number(trimmed);
+  return Number.isFinite(num) ? num : undefined;
+}
+
 function validateMonthDay(num, min, max) {
   if (Number.isNaN(num)) return undefined;
   if (!Number.isInteger(num) || num < min || num > max) return null;
@@ -163,6 +171,11 @@ function buildItemFromRow(row, fileName, lineNumber) {
     item.subgroup = String(row.subgroup).trim();
   }
 
+  const labelThreshold = parseLabelThreshold(row.label_min_years);
+  if (labelThreshold !== undefined) {
+    item.labelMinYears = labelThreshold;
+  }
+
   seenIds.add(id);
   return item;
 }
@@ -227,12 +240,10 @@ Promise.all(
         const w = timeline.getWindow();
         const years = (w.end - w.start) / (1000 * 60 * 60 * 24 * 365.25);
 
-        if (item.type === "point") {
-          if (years > 1200) return "";
-          return item.content || "";
-        }
+        const defaultThreshold = item.type === "point" ? 2500 : 1200;
+        const threshold = item.labelMinYears ?? defaultThreshold;
 
-        if (years > 1200) return "";
+        if (years > threshold) return "";
         return item.content || "";
       }
     });

@@ -1,5 +1,5 @@
-id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup
-jw_overlay_gentile_times,"JW Prophetic Overlays (Interpretive)","range",-607,,,1914,,,"Gentile Times","Gentile Times (JW interpretive overlay): 607 BCE to 1914 CE; refs: Daniel 4; Luke 21:24","jw-overlay",""
-jw_last_days,"JW Prophetic Overlays (Interpretive)","range",1914,,,2026,,,"Last Days","Interpretive (JW): composite “last days” period; not a demographic clock.","jw-overlay",""
-jw_christ_presence,"JW Prophetic Overlays (Interpretive)","range",1914,,,2026,,,"Christ’s Presence","Interpretive (JW): Christ’s presence; anchored to JW framework; not a demographic clock.","jw-overlay",""
-jw_inspection,"JW Prophetic Overlays (Interpretive)","range",1914,,,1919,,,"Inspection","Interpretive (JW): inspection/appointment window.","jw-overlay",""
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup,label_min_years
+jw_overlay_gentile_times,"JW Prophetic Overlays (Interpretive)","range",-607,,,1914,,,"Gentile Times","Gentile Times (JW interpretive overlay): 607 BCE to 1914 CE; refs: Daniel 4; Luke 21:24","jw-overlay","",
+jw_last_days,"JW Prophetic Overlays (Interpretive)","range",1914,,,2026,,,"Last Days","Interpretive (JW): composite “last days” period; not a demographic clock.","jw-overlay","",
+jw_christ_presence,"JW Prophetic Overlays (Interpretive)","range",1914,,,2026,,,"Christ’s Presence","Interpretive (JW): Christ’s presence; anchored to JW framework; not a demographic clock.","jw-overlay","",
+jw_inspection,"JW Prophetic Overlays (Interpretive)","range",1914,,,1919,,,"Inspection","Interpretive (JW): inspection/appointment window.","jw-overlay","",

@@ -3,7 +3,7 @@
 Canonical column order (all CSV files must use this exact header):
 
 ```
-id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup,label_min_years
 ```
 
 Field rules:
@@ -17,6 +17,7 @@ Field rules:
 - `title`: long hover text; always quote `label` and `title` to avoid comma breakage.
 - `className`: optional CSS class list.
 - `subgroup`: optional; can be used for custom stacking.
+- `label_min_years`: optional number; hide the inline label when the visible window is wider than this many years (defaults: points 2500, ranges 1200).
 
 Validation behavior:
 - Rows missing required fields, invalid numbers, out-of-range months/days, or unknown groups are skipped with a console error.

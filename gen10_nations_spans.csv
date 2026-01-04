@@ -1,4 +1,4 @@
-id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup
-gen10_shem,"Genesis 10 Nations (Table of Nations)","range",-2370,,,,-500,,,"Shem line","Genesis 10; schematic post-Flood dispersion span; not a demographic clock.","nation-span",""
-gen10_ham,"Genesis 10 Nations (Table of Nations)","range",-2370,,,,-500,,,"Ham line","Genesis 10; schematic post-Flood dispersion span; not a demographic clock.","nation-span",""
-gen10_japheth,"Genesis 10 Nations (Table of Nations)","range",-2370,,,,-500,,,"Japheth line","Genesis 10; schematic post-Flood dispersion span; not a demographic clock.","nation-span",""
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup,label_min_years
+gen10_shem,"Genesis 10 Nations (Table of Nations)","range",-2370,,,,-500,,,"Shem line","Genesis 10; schematic post-Flood dispersion span; not a demographic clock.","nation-span","",
+gen10_ham,"Genesis 10 Nations (Table of Nations)","range",-2370,,,,-500,,,"Ham line","Genesis 10; schematic post-Flood dispersion span; not a demographic clock.","nation-span","",
+gen10_japheth,"Genesis 10 Nations (Table of Nations)","range",-2370,,,,-500,,,"Japheth line","Genesis 10; schematic post-Flood dispersion span; not a demographic clock.","nation-span","",

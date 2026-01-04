@@ -1,4 +1,4 @@
-id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup
-demo_min,"Demographic Envelope (Non-Doctrinal)","range",1992,,,2026,,,"","Non-doctrinal analytical envelope: minimum end ≈2026 (based on overlap + min anointing age).","demo-envelope",""
-demo_reasonable,"Demographic Envelope (Non-Doctrinal)","range",1992,,,2095,,,"","Non-doctrinal analytical envelope: reasonable end ≈2080–2095.","demo-envelope",""
-demo_extreme,"Demographic Envelope (Non-Doctrinal)","range",1992,,,2160,,,"","Non-doctrinal analytical envelope: extreme end ≈2150–2160.","demo-envelope",""
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup,label_min_years
+demo_min,"Demographic Envelope (Non-Doctrinal)","range",1992,,,2026,,,"","Non-doctrinal analytical envelope: minimum end ≈2026 (based on overlap + min anointing age).","demo-envelope","",
+demo_reasonable,"Demographic Envelope (Non-Doctrinal)","range",1992,,,2095,,,"","Non-doctrinal analytical envelope: reasonable end ≈2080–2095.","demo-envelope","",
+demo_extreme,"Demographic Envelope (Non-Doctrinal)","range",1992,,,2160,,,"","Non-doctrinal analytical envelope: extreme end ≈2150–2160.","demo-envelope","",
