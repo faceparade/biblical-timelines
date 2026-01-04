@@ -9,13 +9,15 @@ function dateY(year, month = 1, day = 1) {
 const CSV_FILES = [
   "./patriarch_lifespans_full.csv",
   "./adamic_anchor_events.csv",
+  "./adamic_detail_events.csv",
   "./gen10_nations_spans.csv",
   "./jw_prophetic_overlays.csv",
   "./demographic_envelope.csv"
 ];
 
 const groups = new vis.DataSet([
-  { id: "adamic", content: "Human Moral History (Adamic)" },
+  { id: "adamic_anchors", content: "Human Moral History — Anchors (Adamic)" },
+  { id: "adamic_details", content: "Human Moral History — Details (Adamic)" },
   { id: "patriarchs", content: "Patriarch Lifespans" },
   { id: "nations", content: "Genesis 10 Nations (Table of Nations)" },
   { id: "jw_prophecy", content: "JW Prophetic Overlays (Interpretive)" },
@@ -24,7 +26,9 @@ const groups = new vis.DataSet([
 ]);
 
 const GROUP_MAP = {
-  "Human Moral History (Adamic)": "adamic",
+  "Human Moral History (Adamic)": "adamic_anchors",
+  "Human Moral History — Anchors (Adamic)": "adamic_anchors",
+  "Human Moral History — Details (Adamic)": "adamic_details",
   "Patriarch Lifespans": "patriarchs",
   "Genesis 10 Nations (Table of Nations)": "nations",
   "Table of Nations": "nations",
