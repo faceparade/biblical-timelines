@@ -32,6 +32,19 @@ const GROUP_MAP = {
 
 const items = new vis.DataSet();
 
+// Create a short label for point items to reduce overlap while keeping full text in tooltip
+function shortPointLabel(fullTitle) {
+  const safe = (fullTitle || "").trim();
+  if (!safe) return "(point)";
+
+  const noParen = safe.split("(")[0];
+  const noDash = noParen.split(/[—-]/)[0];
+  const trimmed = (noDash || safe).trim();
+  const firstWord = trimmed.split(/\s+/)[0];
+
+  return firstWord || trimmed || "(point)";
+}
+
 function splitCSVLine(line) {
   return line
     .split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
@@ -78,15 +91,19 @@ Promise.all(
         const endNum = endStr ? Number(endStr) : NaN;
         const isPoint = !endStr || Number.isNaN(endNum);
 
+        const fullTitle = row.title || "(untitled)";
+        const tooltip = row.description || fullTitle;
+
         const item = {
           id: `csv_${fileIdx}_${i}`,
           group: groupId,
-          content: row.title || "(untitled)",
+          content: fullTitle,
           start: dateY(start),
-          title: row.description || row.title || ""
+          title: tooltip
         };
 
         if (isPoint) {
+          item.content = shortPointLabel(fullTitle);
           item.type = "point";
           item.className = [row.class, "anchor"].filter(Boolean).join(" ");
         } else {
@@ -105,7 +122,9 @@ Promise.all(
     const container = document.getElementById("timeline");
     const timeline = new vis.Timeline(container, items, groups, {
       orientation: { axis: "top" },
-      stack: true,
+      stack: false,
+      maxHeight: "100%",
+      tooltip: { followMouse: true, overflowMethod: "cap" },
       zoomKey: "ctrlKey",
       horizontalScroll: true,
       verticalScroll: true,
