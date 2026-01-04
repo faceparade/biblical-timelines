@@ -233,6 +233,8 @@ Promise.all(
     };
 
     const timeline = new vis.Timeline(container, items, groups, options);
+    window.timeline = timeline;
+    window.timelineGroups = groups;
 
     timeline.setOptions({
       template: function (item) {

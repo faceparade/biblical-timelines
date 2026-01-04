@@ -33,8 +33,28 @@
       border-bottom: 1px solid var(--border);
       background: linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
     }
+    #layer-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      padding: 8px 16px 6px;
+      font-size: 13px;
+      color: var(--text);
+      background: var(--panel);
+      border-bottom: 1px solid var(--border);
+    }
+    #layer-controls label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      color: var(--muted);
+    }
+    #layer-controls input[type="checkbox"] {
+      accent-color: #78a5ff;
+    }
     .note { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 10px; }
-    #timeline { height: calc(100vh - 50px); }
+    #timeline { height: calc(100vh - 90px); }
 
     .vis-timeline { border: 1px solid var(--border); background: var(--panel); }
     .vis-panel.vis-left,
@@ -150,9 +170,43 @@
     <span class="note">Ctrl+Scroll to zoom. Drag to pan. Scroll to move vertically.</span>
   </header>
 
+  <div id="layer-controls">
+    <label><input type="checkbox" data-group="adamic_anchors" checked>Anchors</label>
+    <label><input type="checkbox" data-group="adamic_details" checked>Details</label>
+    <label><input type="checkbox" data-group="patriarchs" checked>Patriarchs</label>
+    <label><input type="checkbox" data-group="nations" checked>Genesis 10</label>
+    <label><input type="checkbox" data-group="jw_prophecy" checked>JW Overlays</label>
+    <label><input type="checkbox" data-group="prophecy_meta" checked>Prophecy Meta</label>
+    <label><input type="checkbox" data-group="demographic" checked>Demographic Envelope</label>
+  </div>
+
   <div id="timeline"></div>
 
   <!-- cache buster -->
   <script src="vis-data.js?v=11"></script>
+  <script>
+    (function () {
+      const controls = document.getElementById("layer-controls");
+      if (!controls) return;
+      const checkboxes = Array.from(controls.querySelectorAll('input[type="checkbox"]'));
+
+      function applyGroups() {
+        if (!window.timeline || !window.timelineGroups) return;
+        const active = checkboxes.filter(cb => cb.checked).map(cb => cb.dataset.group);
+        const filtered = window.timelineGroups.get({
+          filter: g => active.includes(g.id)
+        });
+        window.timeline.setGroups(filtered);
+      }
+
+      const timer = setInterval(() => {
+        if (window.timeline && window.timelineGroups) {
+          clearInterval(timer);
+          checkboxes.forEach(cb => cb.addEventListener("change", applyGroups));
+          applyGroups();
+        }
+      }, 100);
+    })();
+  </script>
 </body>
 </html>
