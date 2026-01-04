@@ -3,3 +3,7 @@ daniel_written,"Authorship + Fulfillment Windows","range",-605,,,-535,,,"Daniel 
 daniel4_fulfillment,"Authorship + Fulfillment Windows","range",-607,,,1914,,,"Daniel 4 (fulfill)","Fulfillment (JW)≈607 BCE–1914 CE; Status: Completed (JW interpretive)","fulfillment-window","",
 rev_written,"Authorship + Fulfillment Windows","point",96,,,,,,"Revelation (written)","Written≈96 CE; Status: Completed (textual authorship)","written-window","",
 rev12_fulfillment,"Authorship + Fulfillment Windows","point",1914,,,,,,"Rev 12 (fulfill)","Fulfillment (JW)≈1914 CE; Status: Completed (JW interpretive)","fulfillment-window","",
+isaiah_written,"Authorship + Fulfillment Windows","range",-740,,,-680,,,"Isaiah (written)","Written≈740–680 BCE; Status: Completed (textual authorship)","written-window","",
+isaiah_messianic_fulfill,"Authorship + Fulfillment Windows","range",29,,,33,,,"Isaiah (messianic fulfill)","Fulfillment (JW)≈29–33 CE; Status: Completed (JW interpretive)","fulfillment-window","",
+olivet_delivered,"Authorship + Fulfillment Windows","point",33,,,,,,"Olivet (delivered)","Delivered≈33 CE; Status: Completed (spoken by Jesus)","written-window","",
+olivet_fulfill,"Authorship + Fulfillment Windows","range",1914,,,2026,,,"Olivet (fulfill)","Fulfillment (JW)≈1914–2026; Status: Ongoing (JW interpretive)","fulfillment-window","",
