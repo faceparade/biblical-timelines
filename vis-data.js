@@ -45,6 +45,17 @@ function shortPointLabel(fullTitle) {
   return firstWord || trimmed || "(point)";
 }
 
+function shortRangeLabel(fullTitle) {
+  const safe = (fullTitle || "").trim();
+  if (!safe) return "(range)";
+  const noParen = safe.split("(")[0];
+  const noDash = noParen.split(/[—-]/)[0];
+  const trimmed = (noDash || safe).trim();
+  const words = trimmed.split(/\s+/).filter(Boolean);
+  if (words.length >= 2) return words.slice(0, 2).join(" ");
+  return words[0] || trimmed || "(range)";
+}
+
 function splitCSVLine(line) {
   return line
     .split(/,(?=(?:[^"]*"[^"]*")*[^"]*$)/)
@@ -92,14 +103,14 @@ Promise.all(
         const isPoint = !endStr || Number.isNaN(endNum);
 
         const fullTitle = row.title || "(untitled)";
-        const tooltip = row.description || fullTitle;
+        const tooltipBase = row.description || fullTitle;
 
         const item = {
           id: `csv_${fileIdx}_${i}`,
           group: groupId,
           content: fullTitle,
           start: dateY(start),
-          title: tooltip
+          title: tooltipBase
         };
 
         if (isPoint) {
@@ -110,6 +121,10 @@ Promise.all(
           item.end = dateY(endNum);
           item.type = "range";
           item.className = row.class || "";
+          item.content = shortRangeLabel(fullTitle);
+          if (!Number.isNaN(endNum)) {
+            item.title = `${tooltipBase} (${start} → ${endNum})`;
+          }
         }
 
         items.add(item);
@@ -120,7 +135,7 @@ Promise.all(
     console.log(`Loaded ${added} timeline items`);
 
     const container = document.getElementById("timeline");
-    const timeline = new vis.Timeline(container, items, groups, {
+    const options = {
       orientation: { axis: "top" },
       stack: false,
       maxHeight: "100%",
@@ -130,6 +145,19 @@ Promise.all(
       verticalScroll: true,
       min: dateY(-4500),
       max: dateY(2300)
+    };
+
+    const timeline = new vis.Timeline(container, items, groups, options);
+
+    timeline.setOptions({
+      template: function (item) {
+        // Hide noisy inline labels when zoomed far out; rely on hover tooltips (title)
+        const w = timeline.getWindow();
+        const years = (w.end - w.start) / (1000 * 60 * 60 * 24 * 365.25);
+        if (item.type === "point") return item.content || "";
+        if (years > 1200) return "";
+        return item.content || "";
+      }
     });
 
     timeline.fit();
