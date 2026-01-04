@@ -137,7 +137,7 @@ Promise.all(
     const container = document.getElementById("timeline");
     const options = {
       orientation: { axis: "top" },
-      stack: false,
+      stack: true,
       maxHeight: "100%",
       tooltip: { followMouse: true, overflowMethod: "cap" },
       zoomKey: "ctrlKey",
@@ -154,7 +154,12 @@ Promise.all(
         // Hide noisy inline labels when zoomed far out; rely on hover tooltips (title)
         const w = timeline.getWindow();
         const years = (w.end - w.start) / (1000 * 60 * 60 * 24 * 365.25);
-        if (item.type === "point") return item.content || "";
+
+        if (item.type === "point") {
+          if (years > 1200) return "";
+          return item.content || "";
+        }
+
         if (years > 1200) return "";
         return item.content || "";
       }
