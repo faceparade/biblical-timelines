@@ -2,43 +2,107 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Biblical Timelines — vis</title>
+  <title>Biblical Timelines — vis-timeline</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://unpkg.com/vis-timeline@8.5.0/styles/vis-timeline-graph2d.min.css" rel="stylesheet">
   <script src="https://unpkg.com/vis-timeline@8.5.0/standalone/umd/vis-timeline-graph2d.min.js"></script>
 
   <style>
-    body { margin: 0; font-family: system-ui, sans-serif; }
-    header { padding: 12px 16px; font-weight: 600; border-bottom: 1px solid #ddd; }
-    #timeline { height: calc(100vh - 52px); }
+    :root{
+      --bg: #0f1115;
+      --panel: #11151c;
+      --text: #d7dbe3;
+      --muted: #9aa4b2;
+      --grid: rgba(255,255,255,0.08);
+      --grid2: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.10);
 
-    .vis-item.demographic { opacity: 0.35; }
-    .vis-item.prophecy { opacity: 0.5; }
-    .vis-item.lifespan { opacity: 0.7; }
+      --range-bg: rgba(120,165,255,0.22);
+      --range-border: rgba(120,165,255,0.45);
+      --range-text: #dbe7ff;
 
-    .vis-item-content {
-      max-width: 520px;
-      white-space: normal;
-      line-height: 1.15;
+      --dot: #78a5ff;
+      --dot-border: rgba(255,255,255,0.35);
     }
 
-    .vis-item.vis-point .vis-item-content {
+    body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    header {
+      padding: 12px 16px;
       font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(to bottom, rgba(255,255,255,0.03), rgba(255,255,255,0.00));
+    }
+    .note { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 10px; }
+    #timeline { height: calc(100vh - 50px); }
+
+    .vis-timeline { border: 1px solid var(--border); background: var(--panel); }
+    .vis-panel.vis-left,
+    .vis-panel.vis-center,
+    .vis-panel.vis-right,
+    .vis-panel.vis-top,
+    .vis-panel.vis-bottom { background: var(--panel) !important; }
+
+    .vis-time-axis .vis-text { color: var(--muted) !important; }
+    .vis-labelset .vis-label .vis-inner { color: var(--text) !important; }
+
+    .vis-grid.vis-vertical, .vis-grid.vis-horizontal { border-color: var(--grid) !important; }
+    .vis-grid.vis-minor { border-color: var(--grid2) !important; }
+
+    .vis-current-time { background-color: rgba(255,95,95,0.75) !important; }
+
+    /* ranges */
+    .vis-item {
+      border-color: var(--range-border) !important;
+      background-color: var(--range-bg) !important;
+      color: var(--range-text) !important;
+      box-shadow: none !important;
+    }
+    .vis-item .vis-item-content { padding: 2px 6px; }
+
+    /* DOT points: only those we mark with class "anchor" */
+    .vis-item.vis-point.anchor {
+      background: transparent !important;
+      border: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      overflow: visible !important;
+    }
+    .vis-item.vis-point.anchor::before {
+      content: "";
+      position: absolute;
+      left: -5px;
+      top: -5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dot);
+      border: 1px solid var(--dot-border);
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.35);
+    }
+    .vis-item.vis-point.anchor .vis-item-content {
+      position: absolute;
+      left: 10px;
+      top: -10px;
+      padding: 0 !important;
+      background: transparent !important;
+      border: none !important;
+      color: var(--text) !important;
+      font-weight: 600;
+      white-space: nowrap;
+      text-shadow: 0 1px 0 rgba(0,0,0,0.6);
     }
   </style>
 </head>
-
 <body>
   <header>
     Human / Prophetic Timeline (vis-timeline)
-    <span style="font-weight:400;color:#555;font-size:13px;margin-left:8px;">
-      Ctrl+Scroll to zoom. Drag to pan. Scroll to move vertically.
-    </span>
+    <span class="note">Ctrl+Scroll to zoom. Drag to pan. Scroll to move vertically.</span>
   </header>
 
   <div id="timeline"></div>
 
-  <script src="./vis-data.js?v=7"></script>
+  <!-- cache buster -->
+  <script src="vis-data.js?v=8"></script>
 </body>
 </html>
