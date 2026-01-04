@@ -12,7 +12,8 @@ const CSV_FILES = [
   "./adamic_detail_events.csv",
   "./gen10_nations_spans.csv",
   "./jw_prophetic_overlays.csv",
-  "./demographic_envelope.csv"
+  "./demographic_envelope.csv",
+  "./prophecy_meta_ranges.csv"
 ];
 
 const groups = new vis.DataSet([

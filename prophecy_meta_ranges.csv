@@ -1,0 +1,5 @@
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup
+daniel_written,"Authorship + Fulfillment Windows","range",-605,,,-535,,,"Daniel (written)","Written≈605–535 BCE; Status: Completed (textual authorship)","written-window",""
+daniel4_fulfillment,"Authorship + Fulfillment Windows","range",-607,,,1914,,,"Daniel 4 (fulfill)","Fulfillment (JW)≈607 BCE–1914 CE; Status: Completed (JW interpretive)","fulfillment-window",""
+rev_written,"Authorship + Fulfillment Windows","point",96,,,,,,"Revelation (written)","Written≈96 CE; Status: Completed (textual authorship)","written-window",""
+rev12_fulfillment,"Authorship + Fulfillment Windows","point",1914,,,,,,"Rev 12 (fulfill)","Fulfillment (JW)≈1914 CE; Status: Completed (JW interpretive)","fulfillment-window",""
