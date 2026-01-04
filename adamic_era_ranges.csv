@@ -1,0 +1,6 @@
+id,group,type,start_year,start_month,start_day,end_year,end_month,end_day,label,title,className,subgroup,label_min_years
+era_preflood,"Human Moral History — Details (Adamic)","range",-4026,,,-2370,,,"Pre-Flood world","Context band (non-doctrinal scaffolding). Does not override anchors.","era-band","", 
+era_patriarchs,"Human Moral History — Details (Adamic)","range",-2370,,,-1513,,,"Patriarch era","Context band (non-doctrinal scaffolding). Does not override anchors.","era-band","",
+era_israel,"Human Moral History — Details (Adamic)","range",-1513,,,-607,,,"Israelite period","Context band (non-doctrinal scaffolding). Does not override anchors.","era-band","",
+era_exile_return,"Human Moral History — Details (Adamic)","range",-607,,,-400,,,"Exile/return","Context band (non-doctrinal scaffolding). Does not override anchors.","era-band","",
+era_1c,"Human Moral History — Details (Adamic)","range",1,,,100,,,"1st century (Jesus/apostolic)","Context band (non-doctrinal scaffolding). Does not override anchors.","era-band","",

@@ -9,6 +9,7 @@ function dateY(year, month = 1, day = 1) {
 const CSV_FILES = [
   "./patriarch_lifespans_full.csv",
   "./adamic_anchor_events.csv",
+  "./adamic_era_ranges.csv",
   "./adamic_detail_events.csv",
   "./gen10_nations_spans.csv",
   "./jw_prophetic_overlays.csv",
